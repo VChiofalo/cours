@@ -195,9 +195,9 @@ WHERE email = 'titi.dupont@email.com';
 
 Ici notre requête nous renverra les **noms** et **prénoms** des **utilisateurs** dont l'**email** correspondra à *titi.dupont@email.com*
 
-Pratiquons !!
+**Pratiquons !!**
 
-Rdv au fichier exo.md
+Rdv au fichier exo.md niveau 1
 
 ## Chapitre 2 : Filtrage et tri des données
 
@@ -237,3 +237,89 @@ SELECT nom, prenom
 FROM utilisateurs
 WHERE age >= 18;
 ```
+
+### 2.3 Fonctions d'agrégation (COUNT, SUM, AVG, MIN, MAX)
+Les fonctions d'agrégation permettent de réaliser des calculs sur un ensemble de lignes. Voici quelques fonctions d'agrégation courantes :
+
+- COUNT(): compte le nombre de lignes
+- SUM(): calcule la somme des valeurs d'une colonne
+- AVG(): calcule la moyenne des valeurs d'une colonne
+- MIN(): trouve la valeur minimale d'une colonne
+- MAX(): trouve la valeur maximale d'une colonne
+
+```sql
+-- Exemple avec COUNT()
+SELECT COUNT(*) AS nombre_clients
+FROM clients;
+
+-- Exemple avec SUM()
+SELECT SUM(salaire) AS total_salaires
+FROM employes;
+
+-- Exemple avec AVG()
+SELECT AVG(salaire) AS salaire_moyen
+FROM employes;
+
+-- Exemple avec MIN()
+SELECT MIN(salaire) AS salaire_min
+FROM employes;
+
+-- Exemple avec MAX()
+SELECT MAX(salaire) AS salaire_max
+FROM employes;
+```
+
+**Pratiquons !!**
+
+Rdv au fichier exo.md niveau 2
+
+### 2.4 Tri des données avec ORDER BY
+
+La clause ORDER BY permet de trier les résultats d'une requête selon une ou plusieurs colonnes.
+
+```sql
+-- Trier les clients par nom (ordre croissant)
+SELECT nom, prenom, email
+FROM clients
+ORDER BY nom ASC;
+
+-- Trier les clients par nom (ordre décroissant)
+SELECT nom, prenom, email
+FROM clients
+ORDER BY nom DESC;
+
+-- Trier les clients par nom, puis par prénom
+SELECT nom, prenom, email
+FROM clients
+ORDER BY nom ASC, prenom ASC;
+
+-- Trier les clients par nom croissant, puis par prénom (ordre décroissant)
+-- C'est étrange mais possible !
+SELECT nom, prenom, email
+FROM clients
+ORDER BY nom ASC, prenom DESC;
+```
+
+### 2.5 Limitation des résultats avec LIMIT
+
+La clause LIMIT permet de limiter le nombre de lignes renvoyées par une requête.
+
+```sql
+-- Récupérer les 10 premiers clients
+SELECT nom, prenom, email
+FROM clients
+ORDER BY nom ASC
+LIMIT 10;
+
+-- Récupérer les clients 11 à 20
+SELECT nom, prenom, email
+FROM clients
+ORDER BY nom ASC
+LIMIT 10 OFFSET 10;
+```
+
+**Pratiquons !!**
+
+Rdv au fichier exo.md niveau 3
+
+## Chapitre 3 : Les requêtes de tri et de regroupement personnalisées.
