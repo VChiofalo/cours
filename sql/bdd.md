@@ -10,6 +10,8 @@ Au cours de cette formation, vous apprendrez à créer, gérer et interroger des
 
 Dans tous les cas, je vous conseiller d'aller sur le site sql.sh qui est une mine d'or pour apprendre le SQL : https://sql.sh/.
 
+---
+
 ## Chapitre 2 : Qu'est-ce qu'une base de données ?
 
 ### 2.1 Introduction aux bases de données
@@ -37,6 +39,8 @@ Les termes qui reviennent souvent :
 
 - NoSQL : Le terme « NoSQL » désigne les différents types de bases de données non relationnelles. Ces bases de données stockent les données dans un format différent. Toutefois, les bases de données NoSQL peuvent être interrogées à l'aide d'API en langage idiomatique, de langages déclaratifs et de langages de requête par exemple, ce qui explique pourquoi elles sont également considérées comme des bases de données « pas seulement SQL ».
 
+---
+
 ## Chapitre 3 : Introduction à SQL et MySQL
 
 ### 3.1 Qu'est-ce que SQL ?
@@ -59,6 +63,7 @@ MySQL est l'un des SGBD les plus populaires au monde. Il est utilisé par de nom
 *Exemple de base de donnée relationnel :*
 ![Exemple de base de donnée relationnel](img/bdd-sql.png "Base de donné SQL"){ style="display: block; margin: 0 auto" }
 
+---
 
 ## Chapitre 4 : Introduction à NoSQL
 
@@ -107,6 +112,8 @@ Une **base de données graphique** stocke les données sous la forme de nœuds e
 *Exemple de base de donnée graphique :*
 ![Exemple de base de donnée graphique](img/bdd-graphique.png "Base de donnée graphique"){ style="display: block; margin: 0 auto" }
 
+---
+
 # Partie 2 : Installation
 
 ## Chapitre 1 : Installation de MySQL
@@ -124,3 +131,109 @@ Après avoir installé MySQL, il est recommandé d'installer un outil de gestion
 Pour nous faciliter la vie, nous allons utiliser un package de logiciels, comprenant MySQL et phpMyAdmin, qui s'appelle Xampp. Pour l'installer, suivez les instructions sur le site officiel : https://www.apachefriends.org/fr/index.html
 
 Il permet d'installer d'un coup : Apache, MySQL, PHP et Perl.
+
+# Partie 3 : Qu'est-ce qu'une requête SQL ?
+
+## Chapitre 1 : Bases de SQL et syntaxe
+
+### 1.1 Requête SQL : Une question à la base de données
+
+Une **requête SQL** est la **commande SQL** la plus élémentaire. Il s'agit d'une question que vous posez à une base de données. Dans ce chapitre, nous allons nous plonger dans les connaissances de base des requêtes SQL pour vous permettre de démarrer votre voyage dans SQL avec des connaissances pratiques dès maintenant !
+
+Une requête SQL est une commande utilisée pour extraire des données d'une base de données. C'est un instrument flexible qui permet d'accéder aux données nécessaires.
+
+Une requête SQL est essentiellement **une question qu'un utilisateur pose à une base de données**. Les questions peuvent varier en complexité, de " *quels sont les modèles de voitures vendus ?* " à " *combien de voitures Volvo sont vendues en moyenne à l'entreprise de M. Dupont chaque année ?* ".
+
+```sql
+SELECT colonne,
+FROM nom_de_la_table
+```
+
+Ici, la requête est composé de deux clauses (deux questions).
+
+Par convention, les mots clés SQL sont écrits en majuscules. Cependant, il est possible d'écrire les mots clés en minuscules, mais cela peut rendre la requête plus difficile à lire.
+
+De plus, il est conseillé de revenir à la ligne après chaque clause pour améliorer la lisibilité de la requête.
+
+### 1.2 Les types de données SQL
+
+Les types de données SQL sont utilisés pour définir le type de données que peut contenir une colonne. Voici quelques types de données courants :
+
+- INT : un entier (nombre entier)
+- FLOAT : un nombre à virgule flottante (nombre réel)
+- VARCHAR(n) : une chaîne de caractères de longueur variable, où n est la longueur maximale
+- DATE : une date (AAAA-MM-JJ)
+- DATETIME : une date et heure (AAAA-MM-JJ HH:MM:SS)
+
+Pour commencer, on ne va pas construire nous même les bases de données, nous allons utiliser des bases de données déjà existantes. Nous n'avons donc pas d'intérêt a développer davantage les types de données.
+
+### 1.3 Les opérateurs SQL
+
+Les opérateurs SQL permettent de comparer, combiner ou effectuer des opérations sur les données. Voici quelques opérateurs courants :
+
+* = : égal
+* <> ou != : différent
+* < : inférieur
+* \> : supérieur
+* <= : inférieur ou égal
+* \>= : supérieur ou égal
+* AND : combine deux conditions, toutes deux doivent être vraies
+* OR : combine deux conditions, l'une d'elles doit être vraie
+* NOT : inverse la condition
+
+### 1.4 Les clauses SELECT, FROM et WHERE
+
+- SELECT : spécifie les colonnes à récupérer dans la requête
+- FROM : spécifie la table à partir de laquelle récupérer les données
+- WHERE : spécifie une condition que les enregistrements doivent respecter pour être récupérés
+
+```sql
+SELECT nom, prenom
+FROM utilisateurs
+WHERE email = 'titi.dupont@email.com';
+```
+
+Ici notre requête nous renverra les **noms** et **prénoms** des **utilisateurs** dont l'**email** correspondra à *titi.dupont@email.com*
+
+Pratiquons !!
+
+Rdv au fichier exo.md
+
+## Chapitre 2 : Filtrage et tri des données
+
+### 2.1 Utilisation de AND, OR et NOT
+
+Les opérateurs AND, OR et NOT permettent de combiner ou de modifier des conditions dans une clause WHERE.
+
+```sql
+-- Exemple avec AND
+SELECT nom, prenom
+FROM utilisateurs
+WHERE email = 'titi.dupont@email.com' AND nom = 'dupont';
+
+-- Exemple avec OR
+SELECT nom, prenom
+FROM utilisateurs
+WHERE email = 'titi.dupont@email.com' OR nom = 'tata.mercier@email.com';
+
+-- Exemple avec NOT
+SELECT nom, prenom
+FROM utilisateurs
+WHERE NOT email = 'titi.dupont@email.com';
+```
+
+### 2.2 Opérateurs de comparaison
+
+Les opérateurs de comparaison permettent de comparer les valeurs des colonnes aux valeurs spécifiées.
+
+```sql
+-- Exemple avec < (inférieur à)
+SELECT nom, prenom
+FROM utilisateurs
+WHERE age < 30;
+
+-- Exemple avec >= (supérieur ou égal à)
+SELECT nom, prenom
+FROM utilisateurs
+WHERE age >= 18;
+```
