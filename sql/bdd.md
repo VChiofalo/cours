@@ -43,6 +43,12 @@ Les termes qui reviennent souvent :
 
 SQL (Structured Query Language) est un langage de programmation standardisé utilisé pour communiquer avec des bases de données relationnelles. SQL permet d'effectuer des opérations telles que la création, la modification, la suppression et la récupération de données à partir de bases de données.
 
+Ces bases de données relationnelles se composent de 3 parties :
+
+- **Les Tables** : Un tableau de colonnes et de lignes. L’ensemble des tables composent la base de données (BDD).
+- **Les Colonnes** définissent les différentes catégories qui composent les informations d’une donnée.
+- **La clé primaire** et **la clé étrangère** permettent de mettre en relation différentes tables.
+
 ### 3.2 Qu'est-ce que MySQL ?
 
 MySQL est un système de gestion de bases de données relationnelles (SGBD / RDBMS en anglais) open source et gratuit. 
@@ -52,6 +58,7 @@ MySQL est l'un des SGBD les plus populaires au monde. Il est utilisé par de nom
 
 *Exemple de base de donnée relationnel :*
 ![Exemple de base de donnée relationnel](img/bdd-sql.png "Base de donné SQL"){ style="display: block; margin: 0 auto" }
+
 
 ## Chapitre 4 : Introduction à NoSQL
 
@@ -80,3 +87,40 @@ Un magasin **clé-valeur** est un type de base de données plus simple où chaqu
 
 *Exemple de donnée clé-valeur :*
 ![Exemple de donnée clé-valeur](img/donnee-cle-valeur.png "Donnée clé-valeur"){ style="display: block; margin: 0 auto" }
+
+### 4.4 Bases de données orientées colonnes
+
+Les **bases de données orientées colonnes**, ou **magasins orientés colonnes**, stockent et lisent des données en lignes et sont organisées sous forme d'ensemble de colonnes.
+
+*Exemple de structure de base de donnée orientée colonne :*
+![Exemple de structure de base de donnée orientée colonne](img/bdd-orientee-colonne.png "Structure base de donné orientée colonne"){ style="display: block; margin: 0 auto" }
+
+Ces bases de données peuvent utiliser des techniques de compression de colonne pour réduire l’espace de stockage et améliorer les performances. La taille importante des lignes et des colonnes permet une récupération efficace des données disparates et volumineuses.
+
+*Exemple de donnée orientée colonne :*
+![Exemple de donnée orientée colonne](img/donnee-orientee-colonne.png "Donnée orientée-colonne"){ style="display: block; margin: 0 auto" }
+
+### 4.5  Bases de données graphiques
+
+Une **base de données graphique** stocke les données sous la forme de nœuds et d'arêtes. Les nœuds stockent généralement des informations sur les personnes, les lieux et les objets (comme les noms), tandis que les arêtes stockent des informations sur les relations entre les nœuds. Ce mécanisme fonctionne bien pour les données fortement connectées, où les relations ou les schémas ne sont pas toujours évidents au départ.
+
+*Exemple de base de donnée graphique :*
+![Exemple de base de donnée graphique](img/bdd-graphique.png "Base de donnée graphique"){ style="display: block; margin: 0 auto" }
+
+# Partie 2 : Installation
+
+## Chapitre 1 : Installation de MySQL
+
+Pour installer MySQL sur votre ordinateur, suivez les instructions fournies par la documentation officielle : https://dev.mysql.com/doc/refman/8.0/en/installing.html
+
+## Chapitre 2 : Installation d'un outil de gestion
+
+Après avoir installé MySQL, il est recommandé d'installer un outil de gestion de bases de données pour faciliter le travail avec MySQL. Voici deux options populaires :
+
+- MySQL Workbench : un outil graphique de gestion de bases de données MySQL. Pour l'installer, suivez les instructions sur le site officiel : https://www.mysql.com/products/workbench/
+
+- phpMyAdmin : un outil web de gestion de bases de données MySQL. Pour l'installer, suivez les instructions sur le site officiel : https://www.phpmyadmin.net/
+
+Pour nous faciliter la vie, nous allons utiliser un package de logiciels, comprenant MySQL et phpMyAdmin, qui s'appelle Xampp. Pour l'installer, suivez les instructions sur le site officiel : https://www.apachefriends.org/fr/index.html
+
+Il permet d'installer d'un coup : Apache, MySQL, PHP et Perl.
