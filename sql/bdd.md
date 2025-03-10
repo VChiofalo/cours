@@ -406,3 +406,54 @@ WHERE adresse IS NOT NULL;
 
 Rdv au fichier exo.md niveau 5
 
+### 3.5 Utilisation de GROUP BY et HAVING
+
+La clause GROUP BY permet de regrouper les enregistrements ayant la même valeur dans une colonne. La clause HAVING permet de filtrer les résultats d'une requête GROUP BY.
+
+```sql
+-- Récupérer le nombre de clients par ville
+SELECT ville, COUNT(*) AS nombre_clients
+FROM clients
+GROUP BY ville;
+
+-- Récupérer les villes ayant plus de 10 clients
+SELECT ville, COUNT(*) AS nombre_clients
+FROM clients
+GROUP BY ville
+HAVING COUNT(*) > 10;
+```
+
+### 3.6 Utilisation de DISTINCT
+
+L'opérateur DISTINCT permet de supprimer les doublons des résultats d'une requête.
+
+```sql
+-- Récupérer les villes des clients
+SELECT ville
+FROM clients;
+
+-- Récupérer les villes des clients (sans doublons)
+SELECT DISTINCT ville
+FROM clients;
+```
+
+### 3.7 Utilisation de AS
+
+L'opérateur AS permet de renommer une colonne ou une table dans une requête.
+
+```sql
+-- Récupérer les villes des clients (avec un alias)
+SELECT DISTINCT ville AS ville_client
+FROM clients;
+```
+
+**Pratiquons !!**
+
+Rdv au fichier exo.md niveau 6
+
+
+Dans cette session, nous avons couvert les bases de la syntaxe SQL, les opérateurs, les types de données, et les clauses pour filtrer, trier et limiter les résultats des requêtes. Dans la session suivante, nous aborderons des sujets plus avancés, tels que les manipulations de données et les jointures.
+
+---
+
+# Partie 3 : Les requêtes de selection avancées

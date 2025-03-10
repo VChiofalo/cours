@@ -57,3 +57,13 @@
 - Afficher le nom, prénom et l'email des élèves ayant bien renseignés leurs addresse mail.
 
 - Afficher le nom, le prénom et l'âge des élèves dont l'âge n'est pas compris entre 23 et 36 ans.
+
+## Niveau 6
+
+- Afficher le nom, prénom et l'âge des élèves triés par âge.
+
+- Afficher le nom, prénom, la moyenne et l'âge des élèves triés par âge et ayant plus de 14 de moyenne.
+
+- Afficher la ville des élèves sans doublon de ville.
+
+- Afficher toutes les données des élèves, mais renommer les colonnes en français. (sans accents)

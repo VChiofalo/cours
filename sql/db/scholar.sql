@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS scholar;
 -- Sélection de la base de données à utiliser
 USE scholar;
 
--- Création de la table `student` avec l'âge au lieu de la date de naissance
+-- Création de la table `student` avec l'âge et la ville de résidence
 CREATE TABLE student (
     student_id INT AUTO_INCREMENT PRIMARY KEY,  
     first_name VARCHAR(50) NOT NULL,            
@@ -12,7 +12,8 @@ CREATE TABLE student (
     age INT NOT NULL,                          
     average_grade DECIMAL(4,2),                 
     email VARCHAR(100),                         
-    phone_number VARCHAR(20)                    
+    phone_number VARCHAR(20),                   
+    city VARCHAR(50) NOT NULL                   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Création de la table `department`
@@ -66,47 +67,47 @@ CREATE TABLE note (
     FOREIGN KEY (subject_id) REFERENCES subject(subject_id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Insertion d'étudiants avec des âges compris entre 18 et 60 ans et des données aléatoires
-INSERT INTO student (first_name, last_name, age, average_grade, email, phone_number) VALUES
-('Alice', 'Dupont', 22, 14.75, 'alice.dupont@mail.com', '0601020304'),
-('Bob', 'Martin', 23, 12.60, 'bob.martin@mail.com', '0602030405'),
-('Claire', 'Lemoine', 24, 16.20, 'claire.lemoine@mail.com', '0603040506'),
-('David', 'Berger', 25, 10.85, 'david.berger@mail.com', '0604050607'),
-('Eva', 'Dufresne', 19, 13.50, 'eva.dufresne@mail.com', '0605060708'),
-('François', 'Petit', 30, 15.40, 'francois.petit@mail.com', '0606070809'),
-('Giselle', 'Roche', 21, 11.90, 'giselle.roche@mail.com', '0607080901'),
-('Hugo', 'Renard', 26, 14.20, 'hugo.renard@mail.com', '0608091011'),
-('Isabelle', 'Marchand', 32, 17.30, 'isabelle.marchand@mail.com', '0609101112'),
-('Jules', 'Gautier', 27, 9.75, 'jules.gautier@mail.com', '0610111213'),
-('Léo', 'Benoit', 25, 12.30, null, '0601121314'),
-('Mia', 'Bouvier', 21, 16.10, 'mia.bouvier@mail.com', '0602233445'),
-('Noah', 'Brunet', 23, 18.30, 'noah.brunet@mail.com', '0603344556'),
-('Olivia', 'Durand', 22, 14.95, 'olivia.durand@mail.com', '0604455667'),
-('Paul', 'Lemoine', 28, 13.75, null, '0605566778'),
-('Quentin', 'Roussel', 24, 15.20, 'quentin.roussel@mail.com', '0606677889'),
-('Rachelle', 'Petit', 19, 14.40, 'rachelle.petit@mail.com', '0607788990'),
-('Sophie', 'Jacques', 29, 16.50, 'sophie.jacques@mail.com', '0608899001'),
-('Théo', 'Lefevre', 21, 11.20, 'theo.lefevre@mail.com', '0609900112'),
-('Alice', 'Lemoine', 22, 13.00, 'alice.lemoine100@mail.com', '0612345678'),
-('Bastien', 'Laurent', 32, 15.80, 'bastien.laurent@mail.com', '0612345679'),
-('Charlotte', 'Dupuis', 27, 18.50, null, '0612345680'),
-('Dylan', 'Chauvet', 24, 12.75, 'dylan.chauvet@mail.com', '0612345681'),
-('Eva', 'Morin', 25, 14.80, 'eva.morin@mail.com', '0612345682'),
-('Frédéric', 'Vallet', 26, 17.10, 'frederic.vallet@mail.com', '0612345683'),
-('Géraldine', 'Brune', 23, 13.40, 'geraldine.brune@mail.com', '0612345684'),
-('Hugo', 'Tissot', 30, 15.10, 'hugo.tissot@mail.com', '0612345685'),
-('Inès', 'Gallet', 21, 12.60, 'ines.gallet@mail.com', '0612345686'),
-('Jérôme', 'Giraud', 29, 13.90, 'jerome.giraud@mail.com', '0612345687'),
-('Kélian', 'Dufresne', 23, 14.70, 'kelian.dufresne@mail.com', '0612345688'),
-('Léa', 'Leblanc', 22, 12.80, null, '0612345689'),
-('Marion', 'Besson', 28, 15.30, 'marion.besson@mail.com', '0612345690'),
-('Nicolas', 'Leclerc', 25, 13.60, 'nicolas.leclerc@mail.com', '0612345691'),
-('Océane', 'Lemoine', 24, 14.10, 'oceane.lemoine@mail.com', '0612345692'),
-('Maxime', 'Dumas', 30, 12.50, null, '0612345693'),
-('Raphaël', 'Germain', 32, 16.90, 'raphael.germain@mail.com', '0612345694'),
-('Sébastien', 'Vidal', 27, 14.00, 'sebastien.vidal@mail.com', '0612345695'),
-('Théodore', 'Chavanne', 31, 16.20, 'theodore.chavanne@mail.com', '0612345696'),
-('Yasmine', 'Lemoine', 22, 14.30, 'yasmine.lemoine@mail.com', '0612345697');
+-- Insertion d'étudiants avec des âges compris entre 18 et 60 ans, villes aléatoires et autres données
+INSERT INTO student (first_name, last_name, age, average_grade, email, phone_number, city) VALUES
+('Alice', 'Dupont', 22, 14.75, 'alice.dupont@mail.com', '0601020304', 'Paris'),
+('Bob', 'Martin', 23, 12.60, 'bob.martin@mail.com', '0602030405', 'Toulouse'),
+('Claire', 'Lemoine', 24, 16.20, 'claire.lemoine@mail.com', '0603040506', 'Lyon'),
+('David', 'Berger', 25, 10.85, 'david.berger@mail.com', '0604050607', 'Rennes'),
+('Eva', 'Dufresne', 19, 13.50, 'eva.dufresne@mail.com', '0605060708', 'Paris'),
+('François', 'Petit', 30, 15.40, 'francois.petit@mail.com', '0606070809', 'Lyon'),
+('Giselle', 'Roche', 21, 11.90, 'giselle.roche@mail.com', '0607080901', 'Toulouse'),
+('Hugo', 'Renard', 26, 14.20, 'hugo.renard@mail.com', '0608091011', 'Rennes'),
+('Isabelle', 'Marchand', 32, 17.30, 'isabelle.marchand@mail.com', '0609101112', 'Paris'),
+('Jules', 'Gautier', 27, 9.75, 'jules.gautier@mail.com', '0610111213', 'Lyon'),
+('Léo', 'Benoit', 25, 12.30, null, '0601121314', 'Toulouse'),
+('Mia', 'Bouvier', 21, 16.10, 'mia.bouvier@mail.com', '0602233445', 'Rennes'),
+('Noah', 'Brunet', 23, 18.30, 'noah.brunet@mail.com', '0603344556', 'Paris'),
+('Olivia', 'Durand', 22, 14.95, 'olivia.dufresne@mail.com', '0604455667', 'Toulouse'),
+('Paul', 'Lemoine', 28, 13.75, null, '0605566778', 'Lyon'),
+('Quentin', 'Roussel', 24, 15.20, 'quentin.roussel@mail.com', '0606677889', 'Rennes'),
+('Rachelle', 'Petit', 19, 14.40, 'rachelle.petit@mail.com', '0607788990', 'Paris'),
+('Sophie', 'Jacques', 29, 16.50, 'sophie.jacques@mail.com', '0608899001', 'Lyon'),
+('Théo', 'Lefevre', 21, 11.20, 'theo.lefevre@mail.com', '0609900112', 'Toulouse'),
+('Alice', 'Lemoine', 22, 13.00, 'alice.lemoine100@mail.com', '0612345678', 'Paris'),
+('Bastien', 'Laurent', 32, 15.80, 'bastien.laurent@mail.com', '0612345679', 'Lyon'),
+('Charlotte', 'Dupuis', 27, 18.50, null, '0612345680', 'Rennes'),
+('Dylan', 'Chauvet', 24, 12.75, 'dylan.chauvet@mail.com', '0612345681', 'Toulouse'),
+('Eva', 'Morin', 25, 14.80, 'eva.morin@mail.com', '0612345682', 'Paris'),
+('Frédéric', 'Vallet', 26, 17.10, 'frederic.vallet@mail.com', '0612345683', 'Lyon'),
+('Géraldine', 'Brune', 23, 13.40, 'geraldine.brune@mail.com', '0612345684', 'Toulouse'),
+('Hugo', 'Tissot', 30, 15.10, 'hugo.tissot@mail.com', '0612345685', 'Rennes'),
+('Inès', 'Gallet', 21, 12.60, 'ines.gallet@mail.com', '0612345686', 'Paris'),
+('Jérôme', 'Giraud', 29, 13.90, 'jerome.giraud@mail.com', '0612345687', 'Lyon'),
+('Kélian', 'Dufresne', 23, 14.70, 'kelian.dufresne@mail.com', '0612345688', 'Rennes'),
+('Léa', 'Leblanc', 22, 12.80, null, '0612345689', 'Toulouse'),
+('Marion', 'Besson', 28, 15.30, 'marion.besson@mail.com', '0612345690', 'Paris'),
+('Nicolas', 'Leclerc', 25, 13.60, 'nicolas.leclerc@mail.com', '0612345691', 'Lyon'),
+('Océane', 'Lemoine', 24, 14.10, 'oceane.lemoine@mail.com', '0612345692', 'Toulouse'),
+('Maxime', 'Dumas', 30, 12.50, null, '0612345693', 'Rennes'),
+('Raphaël', 'Germain', 32, 16.90, 'raphael.germain@mail.com', '0612345694', 'Paris'),
+('Sébastien', 'Vidal', 27, 14.00, 'sebastien.vidal@mail.com', '0612345695', 'Lyon'),
+('Théodore', 'Chavanne', 31, 16.20, 'theodore.chavanne@mail.com', '0612345696', 'Rennes'),
+('Yasmine', 'Lemoine', 22, 14.30, 'yasmine.lemoine@mail.com', '0612345697', 'Toulouse');
 
 -- Associer les étudiants aux départements
 INSERT INTO student_department (student_id, department_id) VALUES

@@ -175,3 +175,32 @@ SELECT last_name, first_name, age
 FROM student
 WHERE age NOT BETWEEN 23 and 36;
 ```
+
+## Niveau 6
+
+- Afficher le nom, prénom et l'âge des élèves triés par âge.
+```sql
+SELECT last_name, first_name, age
+FROM student
+GROUP BY age;
+```
+
+- Afficher le nom, prénom, la moyenne et l'âge des élèves triés par âge et ayant plus de 14 de moyenne.
+```sql
+SELECT last_name, first_name, average_grade, age
+FROM student
+GROUP BY age
+HAVING average_grade > 14;
+```
+
+- Afficher la ville des élèves sans doublon de ville.
+```sql
+SELECT DISTINCT age
+FROM student;
+```
+
+- Afficher toutes les données des élèves, mais renommer les colonnes en français. (sans accents)
+```sql
+SELECT last_name AS nom, first_name AS prenom, age, average_grade AS moyenne_general, email AS mail, phone_number AS numero_de_telephone, city AS ville
+FROM student;
+```
