@@ -1,23 +1,49 @@
 # Exercices sur les selections avec conditions.
 
-## Niveau 1 : selection
+## Niveau 1
 ---
 - Afficher le nom et prenom de tous les élèves.
+
 - Afficher toutes les données des élèves dont le prénom est "Alice".
+
 - Affichier les noms, prénoms et moyennes des élèves dont le nom de famille est "Lemoine".
 
-## Niveau 2 : agrégation et moyenne
+## Niveau 2
 ---
 - Afficher le nombre d'élèves.
+
 - Afficher le nombre d'élèves dont la moyenne est suppérieur à 14.
+
 - Afficher le nombe d'élèves dont la moyenne est comprise entre 8 et 11.
+
 - Afficher le nom, le prenom et la moyenne de l'élève ayant la moyenne la plus haute.
+
 - Afficher le nom, le prenom et la moyenne de l'élève ayant la moyenne la plus basse.
+
 - Afficher la somme de la moyenne de tous les élèves du campus ayant plus de 9 de moyenne.
+
 - Afficher la moyenne de la moyenne de tous les élèves du campus dont la moyenne est inférieur à 16.
 
-## Niveau 3 : trie et limites
+## Niveau 3
 ---
 - Afficher les noms, prenoms et moyenne des élèves triés par ordre alphabetique du nom de famille.
+
 - Afficher les noms, prenoms et moyenne des dix élèves ayant la moyenne la plus haute, triés par notes décroissantes.
+
 - Afficher les noms et prenoms des 10 élèves ayant la moyenne la plus basse, triés par notes croissantes.
+
+## Niveau 4
+
+- Afficher le nom et le prénom de tous les élèves dont le nom de famille commence par la lettre "C".
+
+- Afficher le nom et le prénom de tous les élèves dont le nom de famille se termine par la lettre "a".
+
+- Afficher le nom et le prénom de tous les élèves dont le nom de famille contient la lettre "e".
+
+- Afficher le nom et le prénom de tous les éléves dont le nom de famille contient la lettre "e" et qui ont plus de 10 de moyenne.
+
+- Afficher le nom et le prénom de tous les élèves dont le prénom commence par la lettre "c" et se termine par la lettre "a".
+
+- Afficher le nom, prénom et numéro de téléphone des élèves dont le nom est Bouvier, Lemoine ou Dupuis
+
+- Afficher le nom, prénom et numéro de téléphone des élèves dont le numéro de téléphone n'est pas 0605060708 ou 0605566778

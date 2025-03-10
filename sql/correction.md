@@ -1,6 +1,6 @@
 # Corrections exercices sur les selections avec conditions.
 
-## Niveau 1 : selection
+## Niveau 1
 ---
 - Afficher le nom et prenom de tous les élèves.
 ```sql
@@ -22,7 +22,7 @@ FROM student
 WHERE last_name = `Lemoine`;
 ```
 
-## Niveau 2 : agrégation
+## Niveau 2
 - Afficher le nombre d'élèves.
 ```sql
 SELECT COUNT(student_id)
@@ -69,7 +69,7 @@ FROM student
 WHERE average_grade < 16;
 ```
 
-## Niveau 3 : trie et limite
+## Niveau 3
 ---
 - Afficher les noms, prenoms et moyenne des élèves triés par ordre alphabetique du nom de famille.
 ```sql
@@ -92,4 +92,56 @@ SELECT last_name, first_name, average_grade
 FROM student
 ORDER BY average_grade DESC
 LIMIT 10;
+```
+
+## Niveau 4
+
+- Afficher le nom et le prénom de tous les élèves dont le nom de famille commence par la lettre "C".
+```sql
+SELECT last_name, first_name
+FROM student
+WHERE last_name LIKE 'C%';
+```
+
+- Afficher le nom et le prénom de tous les élèves dont le nom de famille se termine par la lettre "a".
+```sql
+SELECT last_name, first_name
+FROM student
+WHERE last_name LIKE '%a';
+```
+
+- Afficher le nom et le prénom de tous les élèves dont le nom de famille contient la lettre "e".
+```sql
+SELECT last_name, first_name
+FROM student
+WHERE last_name LIKE '%e%';
+```
+
+- Afficher le nom et le prénom de tous les éléves dont le nom de famille contient la lettre "e" et qui ont plus de 10 de moyenne.
+```sql
+SELECT last_name, first_name
+FROM student
+WHERE last_name LIKE '%e%' AND average_grade > 10;
+```
+
+- Afficher le nom et le prénom de tous les élèves dont le prénom commence par la lettre "C" et se termine par la lettre "a".
+
+```sql
+SELECT last_name, first_name
+FROM student
+WHERE last_name LIKE 'C%' AND last_name LIKE '%a';
+```
+
+- Afficher le nom, prénom et numéro de téléphone des élèves dont le nom est Bouvier, Lemoine ou Dupuis
+```sql
+SELECT last_name, first_name, phone_number
+FROM student
+WHERE last_name IN ('Bouvier', 'Lemoine', 'Dupuis');
+```
+
+- Afficher le nom, prénom et numéro de téléphone des élèves dont le numéro de téléphone n'est pas 0605060708 ou 0605566778
+```sql
+SELECT last_name, first_name, phone_number
+FROM student
+WHERE phone_number IN ('0605060708', '0605566778');
 ```

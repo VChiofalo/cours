@@ -128,9 +128,9 @@ Après avoir installé MySQL, il est recommandé d'installer un outil de gestion
 
 - phpMyAdmin : un outil web de gestion de bases de données MySQL. Pour l'installer, suivez les instructions sur le site officiel : https://www.phpmyadmin.net/
 
-Pour nous faciliter la vie, nous allons utiliser un package de logiciels, comprenant MySQL et phpMyAdmin, qui s'appelle Xampp. Pour l'installer, suivez les instructions sur le site officiel : https://www.apachefriends.org/fr/index.html
+Pour nous faciliter la vie, nous allons utiliser un package de logiciels, comprenant MySQL et phpMyAdmin, qui s'appelle Wampp. Pour l'installer, suivez les instructions sur le site officiel : https://www.wampserver.com/
 
-Il permet d'installer d'un coup : Apache, MySQL, PHP et Perl.
+Il permet d'installer d'un coup : Apache, MySQL, et PHP
 
 # Partie 3 : Qu'est-ce qu'une requête SQL ?
 
@@ -323,3 +323,49 @@ LIMIT 10 OFFSET 10;
 Rdv au fichier exo.md niveau 3
 
 ## Chapitre 3 : Les requêtes de tri et de regroupement personnalisées.
+
+### 3.1 Utilisation de LIKE et NOT LIKE
+
+L'opérateur LIKE permet de rechercher des enregistrements qui correspondent à un modèle spécifique. Il est souvent utilisé avec le caractère générique %, qui correspond à n'importe quelle chaîne de caractères.
+
+```sql
+-- Récupérer les clients dont le nom commence par 'D'
+SELECT nom, prenom, email
+FROM clients
+WHERE nom LIKE 'D%';
+
+-- Récupérer les clients dont le nom se termine par 'on'
+SELECT nom, prenom, email
+FROM clients
+WHERE nom LIKE '%on';
+
+-- Récupérer les clients dont le nom contient 'on'
+SELECT nom, prenom, email
+FROM clients
+WHERE nom LIKE '%on%';
+
+-- Récupérer les clients dont le nom ne contient pas 'on'
+SELECT nom, prenom, email
+FROM clients
+WHERE nom NOT LIKE '%on%';
+```
+
+### 3.2 Utilisation de IN et NOT IN
+
+L'opérateur IN permet de rechercher des enregistrements dont la valeur d'une colonne correspond à l'une des valeurs spécifiées.
+
+```sql
+-- Récupérer les clients dont le nom est 'Dupont' ou 'Durand'
+SELECT nom, prenom, email
+FROM clients
+WHERE nom IN ('Dupont', 'Durand');
+
+-- Récupérer les clients dont le nom n'est pas 'Dupont' ou 'Durand'
+SELECT nom, prenom, email
+FROM clients
+WHERE nom NOT IN ('Dupont', 'Durand');
+```
+
+**Pratiquons !!**
+
+Rdv au fichier exo.md niveau 4
