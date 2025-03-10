@@ -145,3 +145,33 @@ SELECT last_name, first_name, phone_number
 FROM student
 WHERE phone_number IN ('0605060708', '0605566778');
 ```
+
+## Niveau 5
+
+- Afficher le nom et prénom des élèves n'ayant pas renseignés leurs addresse mail.
+```sql
+SELECT last_name, first_name
+FROM student
+WHERE email IS NULL;
+```
+
+- Afficher le nom, le prénom et l'âge des élèves dont l'âge est compris 18 et 25 ans
+```sql
+SELECT last_name, first_name, age
+FROM student
+WHERE age BETWEEN 18 and 25;
+```
+
+- Afficher le nom, prénom et l'email des élèves ayant bien renseignés leurs addresse mail.
+```sql
+SELECT last_name, first_name, email
+FROM student
+WHERE email IS NOT NULL;
+```
+
+- Afficher le nom, le prénom et l'âge des élèves dont l'âge n'est pas compris entre 23 et 36 ans.
+```sql
+SELECT last_name, first_name, age
+FROM student
+WHERE age NOT BETWEEN 23 and 36;
+```

@@ -369,3 +369,40 @@ WHERE nom NOT IN ('Dupont', 'Durand');
 **Pratiquons !!**
 
 Rdv au fichier exo.md niveau 4
+
+### 3.3 Utilisation de BETWEEN et NOT BETWEEN
+
+L'opérateur BETWEEN permet de rechercher des enregistrements dont la valeur d'une colonne est comprise entre deux valeurs spécifiées.
+
+```sql
+-- Récupérer les clients dont l'âge est compris entre 20 et 30 ans
+SELECT nom, prenom, email
+FROM clients
+WHERE age BETWEEN 20 AND 30;
+
+-- Récupérer les clients dont l'âge n'est pas compris entre 20 et 30 ans
+SELECT nom, prenom, email
+FROM clients
+WHERE age NOT BETWEEN 20 AND 30;
+```
+
+### 3.4 Utilisation de IS NULL et IS NOT NULL
+
+L'opérateur IS NULL permet de rechercher des enregistrements dont la valeur d'une colonne est NULL.
+
+```sql
+-- Récupérer les clients dont l'adresse est NULL
+SELECT nom, prenom, email
+FROM clients
+WHERE adresse IS NULL;
+
+-- Récupérer les clients dont l'adresse n'est pas NULL
+SELECT nom, prenom, email
+FROM clients
+WHERE adresse IS NOT NULL;
+```
+
+**Pratiquons !!**
+
+Rdv au fichier exo.md niveau 5
+

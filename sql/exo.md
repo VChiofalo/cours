@@ -47,3 +47,13 @@
 - Afficher le nom, prénom et numéro de téléphone des élèves dont le nom est Bouvier, Lemoine ou Dupuis
 
 - Afficher le nom, prénom et numéro de téléphone des élèves dont le numéro de téléphone n'est pas 0605060708 ou 0605566778
+
+## Niveau 5
+
+- Afficher le nom et prénom des élèves n'ayant pas renseignés leurs addresse mail.
+
+- Afficher le nom, le prénom et l'âge des élèves dont l'âge est compris 18 et 25 ans
+
+- Afficher le nom, prénom et l'email des élèves ayant bien renseignés leurs addresse mail.
+
+- Afficher le nom, le prénom et l'âge des élèves dont l'âge n'est pas compris entre 23 et 36 ans.
