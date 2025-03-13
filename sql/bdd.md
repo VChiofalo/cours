@@ -541,3 +541,74 @@ Comme on peut le voir, chaque nom est associé à chaque couleur, formant toutes
 **Pratiquons !!**
 
 Rdv au fichier exo.md niveau 7
+
+## Chapitre 2 : Sous-requêtes
+
+### 2.1 Utilisation de sous-requêtes dans une clause WHERE
+
+Une sous-requête est une requête imbriquée dans une autre requête. Elle peut être utilisée dans une clause WHERE pour filtrer les résultats d'une requête.
+
+Cette solution existe mais il est préférable d'utiliser les jointures, qui sont plus performantes et surtout plus lisibles.
+
+```sql
+-- Récupérer les clients ayant passé au moins une commande
+SELECT nom, prenom
+FROM clients
+WHERE id IN (
+    SELECT client_id
+    FROM commandes
+);
+```
+
+### 2.2 Utilisation de sous-requêtes dans une clause FROM
+
+Une sous-requête peut être utilisée dans une clause FROM pour créer une table temporaire à partir de laquelle récupérer les données.
+
+```sql
+-- Récupérer les clients ayant passé au moins une commande
+SELECT clients.nom, clients.prenom, commandes.nombre
+FROM (
+    SELECT id, nom, prenom
+    FROM clients
+) AS clients
+INNER JOIN (
+    SELECT client_id, COUNT(*) AS nombre
+    FROM commandes
+    GROUP BY client_id
+) AS commandes ON clients.id = commandes.client_id;
+```
+
+# Partie 4 : Les requêtes de modification de données
+
+## Chapitre 1 : Manipulation des données
+
+### 1.1 Insertion de données avec INSERT INTO
+
+La commande INSERT INTO permet d'ajouter de nouveaux enregistrements à une table.
+
+```sql
+-- Insérer un client dans la table clients
+INSERT INTO clients (nom, prenom, email)
+VALUES ('Martin', 'Pierre', 'pierre.martin@email.com');
+```
+
+### 1.2 Mise à jour des données avec UPDATE
+
+La commande UPDATE permet de modifier des données existantes dans une table.
+
+```sql
+-- Mettre à jour l'adresse e-mail d'un client
+UPDATE clients
+SET email = 'pierre.martin@nouveau-email.com'
+WHERE id = 1;
+```
+
+### 1.3 Suppression des données avec DELETE
+
+La commande DELETE permet de supprimer des enregistrements d'une table.
+
+```sql
+-- Supprimer un client de la table clients
+DELETE FROM clients
+WHERE id = 1;
+```

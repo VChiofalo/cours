@@ -77,3 +77,13 @@
 - Afficher les spécialisations ainsi que les matières (subject) associé en utilisant RIGHT JOIN.
 
 - **Facultatif** : essayer le CROSS JOIN
+
+## Niveau 8
+
+- Ajoutez vous à la table élèves (données factices). Prénom, Nom, âge, email, numéro de téléphone, ville
+
+- Ajouter des emails au élèves dont l'adresse mail est NULL. (Regarder SQL CASE)
+
+- Supprimer l'élève suivant : Hugo Tissot, via son id
+
+- Ajouter à votre élève sa spécialisation.

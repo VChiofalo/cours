@@ -228,3 +228,47 @@ SELECT department.department_name, subject.subject_name
 FROM department
 RIGHT JOIN subject ON department.department_id = subject.department_id;
 ```
+
+## Niveau 8
+
+- Ajoutez vous à la table élèves (données factices). Prénom, Nom, âge, email, numéro de téléphone, ville
+```sql
+INSERT INTO student (first_name, last_name, age, email, phone_number, city)
+VALUES ('Jean', 'Dupuis', 23, 'jean.dupuis@mail.com', '0612345678', 'Paris');
+```
+
+- Ajouter des emails au élèves dont l'adresse mail est NULL. (Regarder SQL CASE)
+```sql
+UPDATE student
+SET email = 'leo.benoit@mail.com'
+WHERE id = 11;
+```
+Ou
+```sql
+UPDATE student
+SET email = CASE student_id
+    WHEN 11 THEN 'leo.benoit@mail.com'
+    WHEN 15 THEN 'paul.lemoine@mail.com'
+    WHEN 22 THEN 'charlotte.dupuis@mail.com'
+    WHEN 31 THEN 'léa.leblanc@mail.com'
+    WHEN 35 THEN 'maxime.dumasine@mail.com'
+    END
+WHERE email IS NULL;
+```
+
+- Supprimer l'élève suivant : Hugo Tissot, via son id
+```sql
+DELETE FROM student
+WHERE student_id = 25;
+```
+Ou, si vous n'avez pas l'id
+```sql
+DELETE FROM student
+WHERE student_id = (SELECT student_id FROM student WHERE first_name = 'Hugo' AND last_name = 'Tissot');
+```
+
+- Ajouter à votre élève sa spécialisation.
+```sql
+INSERT INTO student_department (student_id, department_id)
+VALUES (?, ?);
+```
