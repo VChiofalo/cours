@@ -204,3 +204,27 @@ FROM student;
 SELECT last_name AS nom, first_name AS prenom, age, average_grade AS moyenne_general, email AS mail, phone_number AS numero_de_telephone, city AS ville
 FROM student;
 ```
+
+## Niveau 7
+
+- Afficher le nom, prénom et spécialisations (department) de tous les élèves
+```sql
+SELECT student.first_name, student.last_name, department.department_name
+FROM student
+INNER JOIN  student_department ON student.student_id = student_department.student_id
+INNER JOIN department ON student_department.department_id = department.department_id;
+```
+
+- Afficher le nom, prénom et notes de tous les élèves en utilisant LEFT JOIN.
+```sql
+SELECT student.first_name, student.last_name, note.grade
+FROM student
+LEFT JOIN note ON student.student_id = note.student_id;
+```
+
+- Afficher les spécialisations ainsi que les matières (subject) associé en utilisant RIGHT JOIN.
+```sql
+SELECT department.department_name, subject.subject_name
+FROM department
+RIGHT JOIN subject ON department.department_id = subject.department_id;
+```

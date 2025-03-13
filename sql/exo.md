@@ -67,3 +67,13 @@
 - Afficher la ville des élèves sans doublon de ville.
 
 - Afficher toutes les données des élèves, mais renommer les colonnes en français. (sans accents)
+
+## Niveau 7
+
+- Afficher le nom, prénom et spécialisations (department) de tous les élèves.
+
+- Afficher le nom, prénom et notes de tous les élèves en utilisant LEFT JOIN.
+
+- Afficher les spécialisations ainsi que les matières (subject) associé en utilisant RIGHT JOIN.
+
+- **Facultatif** : essayer le CROSS JOIN

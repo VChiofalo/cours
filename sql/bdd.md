@@ -457,3 +457,87 @@ Dans cette session, nous avons couvert les bases de la syntaxe SQL, les opérate
 ---
 
 # Partie 3 : Les requêtes de selection avancées
+
+## Chapitre 1 : Jointures entre tables
+
+Les jointures permettent de combiner des données provenant de plusieurs tables. Il existe différents types de jointures, dont les plus courants sont INNER JOIN, LEFT JOIN, RIGHT JOIN et FULL OUTER JOIN.
+
+### 1.1 INNER JOIN
+
+L'INNER JOIN renvoie les enregistrements qui ont des correspondances dans les deux tables.
+
+```sql
+-- Récupérer les clients et leurs commandes
+SELECT clients.nom, clients.prenom, commandes.date
+FROM clients
+INNER JOIN commandes ON clients.id = commandes.client_id;
+```
+
+### 1.2 LEFT JOIN
+
+Le LEFT JOIN renvoie tous les enregistrements de la table de gauche, et les enregistrements correspondants de la table de droite. Si aucune correspondance n'est trouvée, les résultats de la table de droite sont NULL.
+
+```sql
+-- Récupérer tous les clients et leurs commandes éventuelles
+SELECT clients.nom, clients.prenom, commandes.date
+FROM clients
+LEFT JOIN commandes ON clients.id = commandes.client_id;
+```
+
+### 1.3 RIGHT JOIN
+
+Le RIGHT JOIN renvoie tous les enregistrements de la table de droite, et les enregistrements correspondants de la table de gauche. Si aucune correspondance n'est trouvée, les résultats de la table de gauche sont NULL.
+
+```sql
+-- Récupérer toutes les commandes et leurs clients éventuels
+SELECT clients.nom, clients.prenom, commandes.date
+FROM clients
+RIGHT JOIN commandes ON clients.id = commandes.client_id;
+```
+
+### 1.4 CROSS JOIN
+
+Un CROSS JOIN est un type de jointure SQL qui produit le produit cartésien de deux tables. Cela signifie que chaque ligne de la première table est combinée avec chaque ligne de la seconde table, résultant en un tableau où le nombre de lignes est égal au produit du nombre de lignes des deux tables jointes.
+
+En d'autres termes, si la première table contient n lignes et la deuxième table m lignes, le résultat du CROSS JOIN contiendra n x m lignes. Un CROSS JOIN ne nécessite aucune condition de jointure spécifiée (ON), car chaque combinaison possible de lignes entre les deux tables est automatiquement incluse dans le résultat.
+
+Voici un exemple simple pour illustrer un CROSS JOIN :
+
+Supposons que nous ayons deux petites tables :
+
+Table A:
+
+| **ID**|**Nom**|
+|:-:    |:-:    |
+|1      |Marie  |
+|2      |Pierre |
+
+Table A:
+
+| **ID**|**Couleurs**|
+|:-:    |:-:         |
+|1      |Violet      |
+|2      |Orange      |
+
+La requête SQL utilisant un CROSS JOIN entre ces deux tables serait :
+```sql
+SELECT A.nom, B.couleur
+FROM TableA A
+CROSS JOIN TableB B;
+```
+
+Le résultat serait :
+
+| **Nom**|**Couleur**|
+|:-:     |:-:        |
+|Marie   |Violet     |
+|Marie   |Orange     |
+|Pierre  |Violet     |
+|Pierre  |Orange     |
+
+Comme on peut le voir, chaque nom est associé à chaque couleur, formant toutes les combinaisons possibles.
+
+
+**Pratiquons !!**
+
+Rdv au fichier exo.md niveau 7
