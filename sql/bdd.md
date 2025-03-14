@@ -10,8 +10,6 @@ Au cours de cette formation, vous apprendrez à créer, gérer et interroger des
 
 Dans tous les cas, je vous conseiller d'aller sur le site sql.sh qui est une mine d'or pour apprendre le SQL : https://sql.sh/.
 
----
-
 ## Chapitre 2 : Qu'est-ce qu'une base de données ?
 
 ### 2.1 Introduction aux bases de données
@@ -39,8 +37,6 @@ Les termes qui reviennent souvent :
 
 - NoSQL : Le terme « NoSQL » désigne les différents types de bases de données non relationnelles. Ces bases de données stockent les données dans un format différent. Toutefois, les bases de données NoSQL peuvent être interrogées à l'aide d'API en langage idiomatique, de langages déclaratifs et de langages de requête par exemple, ce qui explique pourquoi elles sont également considérées comme des bases de données « pas seulement SQL ».
 
----
-
 ## Chapitre 3 : Introduction à SQL et MySQL
 
 ### 3.1 Qu'est-ce que SQL ?
@@ -62,8 +58,6 @@ MySQL est l'un des SGBD les plus populaires au monde. Il est utilisé par de nom
 
 *Exemple de base de donnée relationnel :*
 ![Exemple de base de donnée relationnel](img/bdd-sql.png "Base de donné SQL"){ style="display: block; margin: 0 auto" }
-
----
 
 ## Chapitre 4 : Introduction à NoSQL
 
@@ -131,6 +125,8 @@ Après avoir installé MySQL, il est recommandé d'installer un outil de gestion
 Pour nous faciliter la vie, nous allons utiliser un package de logiciels, comprenant MySQL et phpMyAdmin, qui s'appelle Wampp. Pour l'installer, suivez les instructions sur le site officiel : https://www.wampserver.com/
 
 Il permet d'installer d'un coup : Apache, MySQL, et PHP
+
+---
 
 # Partie 3 : Qu'est-ce qu'une requête SQL ?
 
@@ -578,6 +574,8 @@ INNER JOIN (
 ) AS commandes ON clients.id = commandes.client_id;
 ```
 
+---
+
 # Partie 4 : Les requêtes de modification de données
 
 ## Chapitre 1 : Manipulation des données
@@ -612,3 +610,113 @@ La commande DELETE permet de supprimer des enregistrements d'une table.
 DELETE FROM clients
 WHERE id = 1;
 ```
+
+**Pratiquons !!**
+
+Rdv au fichier exo.md niveau 8
+
+---
+
+# Partie 5 : Création de base de donnée
+
+## Chapitre 1 : Clé primaire et clé étrangère 
+
+Les **clés** sont essentielles dans une base de données relationnelle pour garder les tables connectées ou identifier de manière unique les données des tables. Une **clé primaire** identifie les données de manière unique, donc deux lignes ne partagent pas la même clé primaire et ne peuvent pas être nulles. Alors qu’une **clé étrangère** relie deux tables entre elles.  
+
+Une clé primaire d'une table servant de clé étrangère dans une autre est un moyen courant de garantir l'intégrité des données. Il garantit que les données de la table de référencement (celle avec la clé étrangère) ont un lien valide vers la table référencée (celle avec la clé primaire). Cette empêche les enregistrements orphelins et maintient la cohérence dans la base de données.  
+
+### 1.1 Clé primaire
+
+Une clé primaire identifie chaque ligne d'une table. Elle est contenu dans une table parent. Une clé primaire peut être une colonne individuelle ou un groupe de colonnes. Pour insérer, mettre à jour, restaurer ou supprimer des opérations dans une table de base de données, la table doit avoir une clé primaire.  
+
+Avoir une clé primaire est significative pour:  
+
+- Identifier de manière unique les lignes d'une table ou d'enregistrements pour les récupérer, les mettre à jour ou les supprimer facilement.  
+- La clé primaire dans les SGBD comme MySQL et Oracle est d'habitude un entier auto-incrémenté. Cette signifie que la base de données attribue automatiquement à chaque nouvel enregistrement un nouveau numéro, en s'assurant que chaque ligne a son identifiant unique.
+
+### 1.2 Clé étrangère  
+
+Une clé étrangère est un point de référence dans une base de données relationnelle qui établit des relations entre deux tables, garantissant ainsi la cohérence et l'intégrité des données. Contrairement à la clé primaire, elle est présente dans une table enfant.
+
+Lorsque vous appliquez une contrainte de clé étrangère à la colonne d'une table, elle doit faire référence à la clé primaire de la colonne d'une autre table. Cette liaison maintient une structure relationnelle, connectant les données entre différentes tables.
+
+Les clés étrangères répondent à plusieurs besoins dans un modèle de base de données :
+
+- Les clés étrangères garantissent l'intégrité des données en maintenant la cohérence, l'exhaustivité et l'exactitude des tableaux associés.  
+- Elless optimisent les performances des requêtes en facilitant des plans de requête efficaces, en accélérant la récupération des données et en améliorant les relations entre les tables.  
+- Les clés étrangères sont essentielles pour établir des relations entre les tables, permettant le stockage et la récupération de données liées sur plusieurs tables. 
+
+### 1.3 Comparaison des clés primaires et étrangères
+
+Comme nous l'avons vu précèdement, les clés primaires et étrangères jouent des rôles importants mais distincts dans le maintien de l'intégrité des données et l'établissement de connexions significatives dans les bases de données. Bien que les deux impliquent l’identification de points de données, ils répondent à des objectifs différents et possèdent des caractéristiques uniques. Voici comment les clés primaires et étrangères se comparent selon plusieurs facteurs clés :
+
+- **Objectif** : le seul objectif de la clé primaire est d'identifier de manière unique chaque enregistrement de table. En revanche, la clé étrangère fait référence à la clé primaire d'une autre table, établissant une relation et permettant la récupération de données sur différentes tables. Cela vous permet de connecter les informations associées et de voir l’aperçu unifié au sein de votre base de données.
+
+- **Unicité** : la clé primaire doit contenir une valeur unique pour chaque enregistrement de la table. Il ne peut y avoir de doublons – chaque enregistrement a besoin de son identifiant distinct.
+L'unicité au sein de sa table est facultative pour une clé étrangère. Mais il doit faire référence à une valeur unique dans la clé primaire de la table vers laquelle il pointe. Il ne peut se connecter qu’à un seul point bien défini de l’autre côté.
+
+- **Nullabilité** : les valeurs nulles ne sont généralement pas autorisées dans la clé primaire. Chaque enregistrement a besoin d'une valeur de clé primaire définie pour garantir l'absence d'identifiants manquants et éviter toute confusion lors du référencement de points de données spécifiques.
+En fonction de la relation entre les tables, une clé étrangère autorise les valeurs nulles. Par exemple, une commande client peut avoir une clé étrangère faisant référence à une « adresse de livraison », mais le champ d'adresse sera nul si la commande n'a pas encore été expédiée.
+
+- **Application de l’intégrité des données** : de par sa nature même, la clé primaire garantit l'intégrité des données dans les son tableau. L'unicité garantit qu'il n'existe aucun enregistrement en double et l'absence de valeurs nulles empêche les identifiants manquants. 
+Les clés étrangères sont essentielles au maintien de l'intégrité des données à travers les tables. La référence à une clé primaire valide dans une autre table permet d'éviter les enregistrements orphelins (enregistrements avec des valeurs fondamentales étrangères qui ne correspondent à aucune donnée existante dans la table référencée). Cette crée de la cohérence et évite les relations rompues au sein de votre base de données.
+
+- **Possibilité de mise à jour et de suppression** : en raison de son rôle d’identifiant unique, la clé primaire est généralement conçue pour être mise à jour avec parcimonie. La modification de la valeur de la clé primaire pourrait perturber les relations avec d'autres tables.
+Les utilisateurs peuvent mettre à jour les valeurs des clés étrangères si la nouvelle valeur reste une clé primaire valide dans la table référencée. Cependant, la suppression d'un enregistrement dans la table référencée peut avoir un impact sur les valeurs de clé étrangère correspondantes d'autres tables, en fonction des contraintes d'intégrité référentielle choisies. 
+
+*Exemple de clés primaires et étrangères :*
+![Exemple de clés primaires et étrangères](img/keys.png "Clés primaires et étrangères"){ style="display: block; margin: 0 auto" }
+
+## Chapitre 2 : Modèle conceptuel de données
+
+### 2.1 Qu’est-ce qu’un modèle conceptuel de données ?
+
+Un modèle conceptuel de données (MCD) est une représentation abstraite, visuelle et simplifiée de l’ensemble des données d’un système d’information. Conçu pour faciliter la compréhension des relations entre les différents types de données d’un système donné, le MCD s’affranchit des détails techniques (liés à l’enregistrement des données et à leur stockage par exemple) pour se concentrer sur la structure logique des informations. C’est pour cela qu’on utilise l’adjectif « conceptuel » pour caractériser ce modèle.
+
+*Exemple de modèle conceptuel de données :*
+![Exemple de modèle conceptuel de données](img/mcd.png "Modèle conceptuel de données"){ style="display: block; margin: 0 auto" }
+
+Un modèle conceptuel de données est constitué de 3 éléments :
+
+- **Les entités** : elle représente un objet du monde réel ou un concept qui possède des données pertinentes pour le système d’information. Les entités sont souvent des noms communs tels que « Client », « Commande », ou « Produit », qui incarnent les principaux objets sur lesquels le système va opérer ou dont il va garder trace. Chaque entité est unique dans le modèle et est définie par un ensemble d’attributs qui capturent les propriétés essentielles de l’objet ou du concept qu’elle représente.
+
+- **Les attributs** : ils fournissent des détails sur les caractéristiques des entités. Chaque attribut d’une entité détient une parcelle d’information qui décrit une propriété spécifique de cette entité. Par exemple, pour une entité « Employé », les attributs peuvent inclure le nom, le prénom, l’adresse email et le numéro de téléphone de l’employé. Les attributs permettent de stocker les données de manière structurée et de définir la nature des informations que le système doit gérer.
+
+- **Les relations** : elles décrivent comment les entités interagissent entre elles au sein du modèle. Une relation peut indiquer une association, un lien ou une dépendance entre deux entités ou plus. Les relations sont déterminantes pour comprendre la dynamique du système d’information et pour définir comment les différentes entités se rapportent les unes aux autres. Par exemple, une relation peut spécifier qu’un « Employé » travaille dans un « Département », liant ainsi les entités « Employé » et « Département ». Les relations sont également caractérisées par une cardinalité, qui précise la nature quantitative des liaisons entre les entités (comme « un-à-un », « un-à-plusieurs », ou « plusieurs-à-plusieurs »).
+
+L’objectif principal d’un **MCD** est de fournir une vue globale des données, sans entrer dans les complexités de leur implémentation physique dans les bases de données. Ce modèle aide ainsi les concepteurs de systèmes d’information, les analystes de données et les décideurs à se mettre d’accord sur la structure des données avant leur mise en œuvre technique.
+
+### 2.2 Mettre en place un modèle conceptuel de données
+
+La conception d’un modèle conceptuel de données peut être divisé en plusieurs étapes clés, permettant de passer d’une compréhension générale des besoins en données à un schéma structuré qui les représente. Voici comment ce processus se déroule généralement :
+
+- **Identifier les besoins en données** : la première étape consiste à identifier et à comprendre les besoins en données du système. Quelles sont les données à intégrer dans le système ? La réponse à cette question implique des discussions avec les parties prenantes, comme les utilisateurs finaux, les analystes métier et les développeurs, pour déterminer quelles informations sont nécessaires, comment elles seront utilisées et quels sont les objectifs que le système doit atteindre.
+
+- **Définir les entités et les attributs** : à partir des besoins identifiés, il faut définir les entités qui seront nécessaires dans le modèle. Une entité, rappelons-le, représente un objet du monde réel ou un concept pertinent pour le système d’information, comme un client, un produit ou un événement. Pour chaque entité, les attributs, qui sont les caractéristiques ou propriétés de ces entités, sont également définis.
+
+- **Établir les relations entre entités et attributs (cardinalités)** : une fois les entités et leurs attributs identifiés, l’étape suivante consiste à établir les relations entre elles. Ces relations décrivent comment les entités interagissent ou se rapportent les unes aux autres dans le contexte du système d’information. Elles peuvent être de différents types, comme une relation un-à-un, un-à-plusieurs, ou plusieurs-à-plusieurs, en fonction de la nature des interactions entre les entités :
+    -  **Relations un à un (1:1)** : dans une relation un-à-un, une instance d’une entité est associée à une et une seule instance d’une autre entité, et vice versa. Ce type de relation est souvent utilisé pour diviser une entité en deux pour des raisons de clarté, de sécurité des données ou de performance. Par exemple, une entité « Utilisateur » peut être liée à une entité « ProfilUtilisateur » dans une relation un-à-un, où chaque utilisateur a un unique profil associé.
+    - **Relations un-à-plusieurs (1:N)** : la relation un-à-plusieurs est l’une des plus courantes dans les modèles conceptuels de données. Dans ce type de relation, une instance d’une entité peut être associée à plusieurs instances d’une autre entité, mais une instance de cette deuxième entité ne peut être liée qu’à une unique instance de la première entité. Par exemple, dans une relation un-à-plusieurs entre les entités « Département » et « Employé », un département peut avoir plusieurs employés, mais chaque employé appartient à un seul département.
+    - **Relation plusieurs-à-plusieurs (N:N)**: dans une relation plusieurs-à-plusieurs, plusieurs instances d’une entité peuvent être associées à plusieurs instances d’une autre entité. Ce type de relation nécessite souvent une entité d’association supplémentaire pour gérer les instances de relation. Par exemple, une relation plusieurs-à-plusieurs entre les entités « Étudiant » et « Cours » indique qu’un étudiant peut s’inscrire à plusieurs cours et qu’un cours peut être suivi par plusieurs étudiants. Une entité d’association « Inscription » pourrait être utilisée pour gérer les informations spécifiques à chaque inscription d’un étudiant à un cours.
+
+### 2.3 Produire une représentation graphique du MCD
+
+Enfin, le modèle conceptuel est souvent représenté sous forme graphique, à l’aide de diagrammes entité-association. Ces diagrammes permettent de visualiser facilement les entités, leurs attributs, et les relations entre elles, offrant une vue d’ensemble claire et compréhensible du modèle de données.
+
+En résumé, le fonctionnement d’un modèle conceptuel de données repose sur une démarche méthodique et collaborative, visant à abstraire et à structurer les informations nécessaires au système d’information. Cette approche permet de s’assurer que toutes les données essentielles sont prises en compte de manière cohérente, facilitant ainsi la conception, la mise en œuvre, et l’évolution du système.
+
+*Exemple de représentation graphique du modèle conceptuel de données :*
+![Exemple de représentation graphique du modèle conceptuel de données](img/exemple-representation-modele-conceptuel-donnees-simple.png "Représentation graphique du modèle conceptuel de données"){ style="display: block; margin: 0 auto" }
+
+**Pratiquons !!**
+
+Nous allons maintenant créer notre propre Base de donnée relationelle
+
+ ---
+
+*Sources :*
+*- Julien POIRIER*
+*- Wikipédia*
+*- cartelis*
+*- astera*
+*- mongodb*
