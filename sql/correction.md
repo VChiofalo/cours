@@ -229,6 +229,39 @@ FROM department
 RIGHT JOIN subject ON department.department_id = subject.department_id;
 ```
 
+- Affichez le prénom, le nom et la moyenne des notes de chaque étudiant. (Joindre les tables student et note).
+```sql
+SELECT student.first_name, student.last_name, AVG(note.grade) AS average_grade
+FROM student
+INNER JOIN note ON student.student_id = note.student_id
+GROUP BY student.student_id;
+```
+
+- Affichez le prénom, le nom de l'étudiant et le nom de chaque matière qu'ils ont suivie.
+```sql
+SELECT student.first_name, student.last_name, subject.subject_name
+FROM student
+INNER JOIN note ON student.student_id = note.student_id
+INNER JOIN subject ON note.subject_id = subject.subject_id;
+```
+
+- Affichez le nom de chaque département et le nombre d'étudiants qui y sont inscrits.
+```sql
+SELECT department.department_name, COUNT(student_department.student_id) AS number_of_students
+FROM department
+INNER JOIN student_department ON department.department_id = student_department.department_id
+GROUP BY department.department_id;
+```
+
+- Affichez le prénom, le nom de chaque étudiant, le nom de la matière et la note qu'ils ont obtenue, triée par note décroissante.
+```sql
+SELECT student.first_name, student.last_name, subject.subject_name, note.grade
+FROM student
+INNER JOIN note ON student.student_id = note.student_id
+INNER JOIN subject ON note.subject_id = subject.subject_id
+ORDER BY note.grade DESC;
+```
+
 ## Niveau 8
 
 - Ajoutez vous à la table élèves (données factices). Prénom, Nom, âge, email, numéro de téléphone, ville

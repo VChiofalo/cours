@@ -708,6 +708,24 @@ En résumé, le fonctionnement d’un modèle conceptuel de données repose sur 
 *Exemple de représentation graphique du modèle conceptuel de données :*
 ![Exemple de représentation graphique du modèle conceptuel de données](img/exemple-representation-modele-conceptuel-donnees-simple.png "Représentation graphique du modèle conceptuel de données"){ style="display: block; margin: 0 auto" }
 
+### 2.4 Les cardinalitées
+
+L'expression de la cardinalité est obligatoire pour chaque patte d'un type association.
+
+ Une cardinalité minimale est toujours 0 ou 1 et une cardinalité maximale est toujours 1 ou n.
+
+Ainsi, si une cardinalité maximale est connue et vaut 2, 3 ou plus, alors nous considérons qu'elle est indéterminée et vaut n. En effet, si nous connaissons n au moment de la conception, il se peut que cette valeur évolue au cours du temps. Il vaut donc mieux considérer n comme inconnue dès le départ. De la même manière, on ne modélise pas des cardinalités minimales qui valent plus de 1, car ces valeurs sont également susceptibles d'évoluer. Enfin, une cardinalité maximale de 0 n'a pas de sens, car elle rendrait le type association inutile.
+
+Les seules cardinalités admises sont donc :
+
+- 0,1 : une occurrence du type entité peut exister tout en n'étant impliquée dans aucune association et peut être impliquée dans au maximum une association.
+
+- 0,n : c'est la cardinalité la plus ouverte ; une occurrence du type entité peut exister tout en n'étant impliquée dans aucune association et peut être impliquée, sans limitation, dans plusieurs associations.
+
+- 1,1 : une occurrence du type entité ne peut exister que si elle est impliquée dans exactement (au moins et au plus) une association.
+
+- 1,n : une occurrence du type entité ne peut exister que si elle est impliquée dans au moins une association.
+
 **Pratiquons !!**
 
 Nous allons maintenant créer notre propre Base de donnée relationelle
