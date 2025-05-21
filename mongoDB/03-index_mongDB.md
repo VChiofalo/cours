@@ -155,6 +155,8 @@ Dans notre cas, si je **change l’ordre d’employer**, la requête devra parco
 |Préfixe complet dans bon ordre             |✅ Oui               |Lecture optimisée                 |
 |Préfixe complet, sens partiellement inversé|❌ Non               |Lecture partielle, mais tri manuel|
 
+---
+
 ## MultiKey Mongodb index
 
 Le **multi-key index** existe lorsque vous souhaitez indexer un champ qui va contenir un *Array*. Pour pouvoir indexer ce champ, MongoDB va créer une clé pour chaque élément que va contenir le tableau, d’où le nom « multi-key » mongodb index.
@@ -206,6 +208,8 @@ Le **Text Index** a pour but de permettre des recherches dans un champ de type *
 ```js
 db.blogPosts.createIndex( { subject: "text", body: "text" } )
 ```
+
+---
 
 ## ⚠️ Attention à « l’index overhead »
 
@@ -269,6 +273,14 @@ db.users.createIndex({email: 1, role: 1} , {unique: true})
 
 En effet, un **user** peut avoir 2 comptes avec la même adresse e-mail, tant que son rôle est différent. Par exemple une même personne peut avoir un compte Uber en tant que chauffeur et en tant que client avec la même adresse e-mail.
 
-## Les index géospatiaux
+### Les index géospatiaux
 
 MongoDB propose également des index permettant de placer des **éléments dans l’espace**. **L’index 2d** permet de placer des coordonnées sur un axe en 2 dimensions, **l’index 2dsphere** permet de placer des coordonnées latitudes-longitudes et **l’index geoHaystack** permet de définir une aire suivant des points sur un axe 2 dimensions.
+
+---
+
+*Sources :*
+*- Julien POIRIER*
+*- welovedevs*
+*- mongodb*
+*- wikipedia*

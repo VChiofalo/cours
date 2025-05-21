@@ -242,6 +242,13 @@ Parmi les utilisateurs Français de MongoDB on retrouve entre autre *AXA*, **Bou
 
 ---
 
+## Installation 
+
+Pour la suite, il va nous falloir MongoDB. Suivez le lien d'installation suivant !
+👉 [Intallation MongoDB](https://www.mongodb.com/docs/manual/installation/)
+
+---
+
 👉 [Documentation officiel mongodb](https://www.mongodb.com/docs/)
 
 ---
