@@ -50,10 +50,6 @@ MongoDB Atlas est la solution cloud de Database as a Service (DBaaS). Atlas vous
 *Schéma de présentation MongoDB Atlas :*
 ![Schéma mongoDB Atlas](img/mongodb-atlas.png "Schéma mongoDB Atlas"){ style="display: block; margin: 0 auto" }
 
-MongoDB Atlas permet de choisir sa région préférée sur 3 cloud providers.
-
-MongoDB Atlas permet de déployer un serveur MongoDB dans une infrastructure cloud chez AWS, GCP ou Azure.
-
 ***Atlas propose même un plan gratuit pour 500MB, idéal pour vos projets perso ou pour expérimenter.***
 
 #### MongoDB Compass
@@ -129,13 +125,13 @@ Cette imbrication permet à MongoDB d’améliorer ses **performances de lecture
 
 Au cœur de sa vitesse de lecture réside la **diversité des index proposés**. L’**utilisation** et la **combinaison** de ces index permettent à vos requêtes de parcourir un échantillon de la donnée au lieu d’effectuer la recherche sur l’ensemble de la collection. MongoDB offre la possibilité d’indexer un objet sur plusieurs champs, d’indexer un champ contenant un tableau d’éléments, d’indexer des coordonnées GPS et d’indexer un bloc de texte pour pouvoir faire une recherche dans son contenu.
 
-Comme pour toute base de données, la **multiplication des index** augmente la taille de la base de données et la lenteur à l’écriture. C’est pourquoi une stratégie d’index est clé pour avoir le minimum d’index possible tout en couvrant un maximum de requêtes provenant de l’application.
+Comme pour toute base de données, multiplier les index entraîne une **augmentation de la taille** de la base et un ralentissement des opérations d’écriture. Il est donc essentiel de définir une stratégie d’indexation efficace, visant à limiter leur nombre tout en assurant une couverture optimale des requêtes de l’application.
 
 #### Performances à l’écriture
 
 Comme on a pu le voir plus haut, **un cluster** de base de données MongoDB est **répliqué plusieurs fois**, avec **une base primaire** et **des répliques** considérées comme secondaires. MongoDB peut présenter des performances intéressantes même à l’écriture grâce à la notion de Write concerns. Plus une base est répliquée et/ou shardée (la notion de sharding est expliquée ci-dessous), plus MongoDB doit aller écrire la donnée à différents endroits.
 
-Le **write concern** est la notion de confirmation d’écriture. Par défaut, le write concern est défini à 1, c’est-à-dire que lors d’une écriture, **MongoDB va écrire la donnée une première fois** sur la base de données primaire et vous retourner sa confirmation. Elle se chargera derrière les rideaux de coordonner les réplications.
+Le **write concern** est la notion de confirmation d’écriture. Par défaut, le write concern est défini à 1, c’est-à-dire que lors d’une écriture, **MongoDB va écrire la donnée une première fois** sur la base de données primaire et vous retourner sa confirmation. Elle se chargera, en tâche de fond, de coordonner les réplications.
 
 Suivant vos besoins, vous pourriez **augmenter le write concern** si vous voulez vous assurer que la donnée a été **répliquée sur les bases de données secondaires** de votre cluster, ou au contraire le **réduire à zéro** pour désactiver cet accusé d’écriture en base et augmenter d’autant plus la performance.
 
@@ -143,7 +139,7 @@ Suivant vos besoins, vous pourriez **augmenter le write concern** si vous voulez
 
 En informatique comme dans la vie, la seule certitude est que quelque chose va mourir.
 
-Partant de ce constat et du positionnement **Cloud first**, MongoDB fait le choix de répliquer votre base de données en plusieurs serveurs mongod. Un primaire et plusieurs répliques.
+Partant de ce constat et du positionnement **Cloud first**, MongoDB fait le choix de répliquer votre base de données en plusieurs serveurs mongod. Un primaire et plusieurs répliques (cela n'empêche pas une utilisation single node pour votre application).
 
 Si votre machine (virtuelle) hébergeant le serveur MongoDB venait à **être défectueuse**, votre donnée reste très **rapidement accessible** grâce **aux répliques** disponibles. La VM défectueuse serait supprimée et un nouveau **Leader** émergerait pendant qu’une **nouvelle réplique** serait en cours de création.
 
@@ -204,9 +200,9 @@ Toutes ces belles fonctionnalités de MongoDB semblent faire d’elle une techno
 
 #### La dénormalisation à outrance
 
-Comme on l’a vu, MongoDB incite à la **dénormalisation**. Que ce soit dans la documentation et les ressources de formation officielle de MongoDB University, il vous est encouragé de dupliquer votre donnée dans la mesure du possible.
+Comme on l’a vu, MongoDB incite à la **dénormalisation**. Que ce soit dans la documentation ou les ressources de formation officielle de MongoDB University, il vous est encouragé de dupliquer votre donnée dans la mesure du possible.
 
-Bien que çà paraisse pertinent au vu des faibles coûts des capacités de stockage aujourd’hui, cette duplication va créé un nouveau problème: **l’intégrité des données**.
+Bien que ça paraisse pertinent au vu des faibles coûts des capacités de stockage aujourd’hui, cette duplication va créer un nouveau problème: **l’intégrité des données**.
 
 Imaginez qu’il faille **mettre à jour plusieurs collections** à chaque fois qu’un utilisateur va corriger son adresse. Cette complexité s’ajoute **à la charge des développeurs** qui, à chaque fois qu’ils vont toucher une fonctionnalité qui fait référence aux adresses, vont devoir se charger de coordonner l’update dans toutes les collections.
 
@@ -240,11 +236,13 @@ Parmi les utilisateurs Français de MongoDB on retrouve entre autre *AXA*, **Bou
 
 **Les développeurs Fullstack JavaScript** ont également beaucoup à y gagner. Les stacks employés pour les projets JavaScript utilisent plus souvent MongoDB. C’est une compétence qui vous sera probablement plus demandée qu’un **développeur PHP**.
 
+MongoDB sera donc très performant avec des **applications à fort traffic** (e-commerce, réseaux sociaux, etc), les **applications géospatiale**s (Uber, Deliveroo, Maps, etc), les **applications de journalisation** (centralisation de logs, systèmes de monitoring, traces d’événements utilisateur, etc) et les **applications en évolution rapide** (MVP, startups, etc)
+
 ---
 
 ## Installation 
 
-Pour la suite, il va nous falloir MongoDB. Suivez le lien d'installation suivant !
+Pour la suite, il va nous falloir installer MongoDB. Suivez le lien d'installation suivant !
 👉 [Intallation MongoDB](https://www.mongodb.com/docs/manual/installation/)
 
 ---
