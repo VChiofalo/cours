@@ -32,6 +32,8 @@
 
 ## Niveau 3 (bonus)
 
+- Récupèrez les produits avec leur nom de catégorie (jointure entre products et categories).
+
 - Jointure entre *orders* et *users* pour afficher :
     - l’email et le nom de l’utilisateur
     - le total et la date de la commande

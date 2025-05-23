@@ -117,6 +117,28 @@ db.users.find({
 
 ## Niveau 3 (bonus)
 
+- Récupèrez les produits avec leur nom de catégorie (jointure entre products et categories).
+```js
+db.products.aggregate([
+  {
+    $lookup: {
+      from: "categories",
+      localField: "category",
+      foreignField: "_id",
+      as: "categorie"
+    }
+  },
+  { $unwind: "$categorie" },
+  {
+    $project: {
+      name: 1,
+      price: 1,
+      "categorie.name": 1
+    }
+  }
+])
+```
+
 - Jointure entre *orders* et *users* pour afficher :
     - l’email et le nom de l’utilisateur
     - le total et la date de la commande
