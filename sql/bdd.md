@@ -658,7 +658,7 @@ L'unicité au sein de sa table est facultative pour une clé étrangère. Mais i
 - **Nullabilité** : les valeurs nulles ne sont généralement pas autorisées dans la clé primaire. Chaque enregistrement a besoin d'une valeur de clé primaire définie pour garantir l'absence d'identifiants manquants et éviter toute confusion lors du référencement de points de données spécifiques.
 En fonction de la relation entre les tables, une clé étrangère autorise les valeurs nulles. Par exemple, une commande client peut avoir une clé étrangère faisant référence à une « adresse de livraison », mais le champ d'adresse sera nul si la commande n'a pas encore été expédiée.
 
-- **Application de l’intégrité des données** : de par sa nature même, la clé primaire garantit l'intégrité des données dans les son tableau. L'unicité garantit qu'il n'existe aucun enregistrement en double et l'absence de valeurs nulles empêche les identifiants manquants. 
+- **Application de l’intégrité des données** : de par sa nature même, la clé primaire garantit l'intégrité des données dans son tableau. L'unicité garantit qu'il n'existe aucun enregistrement en double et l'absence de valeurs nulles empêche les identifiants manquants. 
 Les clés étrangères sont essentielles au maintien de l'intégrité des données à travers les tables. La référence à une clé primaire valide dans une autre table permet d'éviter les enregistrements orphelins (enregistrements avec des valeurs fondamentales étrangères qui ne correspondent à aucune donnée existante dans la table référencée). Cette crée de la cohérence et évite les relations rompues au sein de votre base de données.
 
 - **Possibilité de mise à jour et de suppression** : en raison de son rôle d’identifiant unique, la clé primaire est généralement conçue pour être mise à jour avec parcimonie. La modification de la valeur de la clé primaire pourrait perturber les relations avec d'autres tables.
@@ -707,6 +707,24 @@ En résumé, le fonctionnement d’un modèle conceptuel de données repose sur 
 
 *Exemple de représentation graphique du modèle conceptuel de données :*
 ![Exemple de représentation graphique du modèle conceptuel de données](img/exemple-representation-modele-conceptuel-donnees-simple.png "Représentation graphique du modèle conceptuel de données"){ style="display: block; margin: 0 auto" }
+
+### 2.4 Les cardinalitées
+
+L'expression de la cardinalité est obligatoire pour chaque patte d'un type association.
+
+ Une cardinalité minimale est toujours 0 ou 1 et une cardinalité maximale est toujours 1 ou n.
+
+Ainsi, si une cardinalité maximale est connue et vaut 2, 3 ou plus, alors nous considérons qu'elle est indéterminée et vaut n. En effet, si nous connaissons n au moment de la conception, il se peut que cette valeur évolue au cours du temps. Il vaut donc mieux considérer n comme inconnue dès le départ. De la même manière, on ne modélise pas des cardinalités minimales qui valent plus de 1, car ces valeurs sont également susceptibles d'évoluer. Enfin, une cardinalité maximale de 0 n'a pas de sens, car elle rendrait le type association inutile.
+
+Les seules cardinalités admises sont donc :
+
+- 0,1 : une occurrence du type entité peut exister tout en n'étant impliquée dans aucune association et peut être impliquée dans au maximum une association.
+
+- 0,n : c'est la cardinalité la plus ouverte ; une occurrence du type entité peut exister tout en n'étant impliquée dans aucune association et peut être impliquée, sans limitation, dans plusieurs associations.
+
+- 1,1 : une occurrence du type entité ne peut exister que si elle est impliquée dans exactement (au moins et au plus) une association.
+
+- 1,n : une occurrence du type entité ne peut exister que si elle est impliquée dans au moins une association.
 
 **Pratiquons !!**
 

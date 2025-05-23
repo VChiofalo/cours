@@ -76,6 +76,14 @@
 
 - Afficher les spécialisations ainsi que les matières (subject) associé en utilisant RIGHT JOIN.
 
+- Affichez le prénom, le nom et la moyenne des notes de chaque étudiant. (Joindre les tables student et note).
+
+- Affichez le prénom, le nom de l'étudiant et le nom de chaque matière qu'ils ont suivie.
+
+- Affichez le nom de chaque département et le nombre d'étudiants qui y sont inscrits.
+
+- Affichez le prénom, le nom de chaque étudiant, le nom de la matière et la note qu'ils ont obtenue, triée par note décroissante
+
 - **Facultatif** : essayer le CROSS JOIN
 
 ## Niveau 8
