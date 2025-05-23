@@ -1,5 +1,3 @@
-// npm install @faker-js/faker
-
 const fs = require('fs');
 const { faker } = require('@faker-js/faker');
 const { ObjectId } = require('bson');

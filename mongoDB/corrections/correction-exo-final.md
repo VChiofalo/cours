@@ -1,47 +1,12 @@
-# Exercice création de base de donnée
+# Correction exercice création de base de donnée
 
-## Sujet
+## Création de la base et collections (dans mongosh)
 
-Créez une base MongoDB pour gérer une bibliothèque en ligne.
-Il faut modéliser :
+```js
+use libraryDB
+```
 
-- Auteurs (nom, date de naissance, nationalité)
-
-- Livres (titre, date publication, pages, genres, auteur référencé)
-
-- Utilisateurs (nom, email, abonnement actif ou non)
-
-- Emprunts (livre emprunté, utilisateur, date emprunt, date retour, statut)
-
-## Objectifs
-
-1 - Créez les collections : authors, books, users, borrowings.
-
-2 - Insérez des documents (environ 5 auteurs, 10 livres, 5 utilisateurs, 8 emprunts).
-
-3 - Créez des index pertinents
-
-4 - Écrivez des requêtes MongoDB pour :
-- Trouver tous les livres d’un auteur donné.
-- Trouver les emprunts actifs (statut borrowed).
-- Trouver les utilisateurs avec un abonnement actif.
-- Trouver les livres de genre "Science Fiction" ou "Fantastique".
-
-5 - Créez une vue qui liste les livres actuellement empruntés avec les noms des utilisateurs.
-
-6 - **Bonus** : Agréger le nombre de livres empruntés par chaque utilisateur
-
-## Consignes
-
-- Utilisez des références (authorId dans books, userId et bookId dans borrowings).
-
-- Choisissez un champ _id automatique (ObjectId).
-
-- Respectez la structure MongoDB avec des objets imbriqués où c’est pertinent.
-
-- Faire une validation simple via des requêtes find().
-
-## Jeu de données (vous pouvez aussi faire la votre)
+## Insertion des documents
 
 ```js
 // Auteurs
@@ -53,9 +18,9 @@ db.authors.insertMany([
   { name: "Philip K. Dick", birthDate: new Date("1928-12-16"), nationality: "Américain" }
 ]);
 
-// Récupérer un auteur pour référence
-const asimov = /* écrivez votre code */;
-const rowling = /* écrivez votre code */;
+// Récupérer un auteur pour référence (exemple)
+const asimov = db.authors.findOne({ name: "Isaac Asimov" });
+const rowling = db.authors.findOne({ name: "J.K. Rowling" });
 
 // Livres
 db.books.insertMany([
@@ -87,4 +52,105 @@ db.borrowings.insertMany([
   { userId: alice._id, bookId: fondation._id, borrowDate: new Date("2025-03-10"), returnDate: new Date("2025-04-10"), status: "returned" }
   // Ajoute d'autres emprunts si besoin
 ]);
+```
+
+## Création d'index
+
+```js
+db.books.createIndex({ authorId: 1 });
+db.borrowings.createIndex({ userId: 1 });
+db.borrowings.createIndex({ status: 1 });
+```
+
+## Requêtes MongoDB
+
+### Tous les livres d’un auteur (exemple : Isaac Asimov)
+
+```js
+const asimov = db.authors.findOne({ name: "Isaac Asimov" });
+
+db.books.find({ authorId: asimov._id }).pretty();
+```
+
+### Emprunts actifs (status = "borrowed")
+
+```js
+db.borrowings.find({ status: "borrowed" }).pretty();
+```
+
+### Utilisateurs avec abonnement actif
+
+```js
+db.users.find({ subscriptionActive: true }).pretty();
+```
+
+### Livres de genre "Science Fiction" ou "Fantastique"
+
+```js
+db.books.find({ genres: { $in: ["Science Fiction", "Fantastique"] } }).pretty()
+```
+
+## Création d’une vue pour livres empruntés avec nom utilisateur
+
+```js
+db.createView("borrowed_books_with_users", "borrowings", [
+  { $match: { status: "borrowed" } },
+  {
+    $lookup: {
+      from: "books",
+      localField: "bookId",
+      foreignField: "_id",
+      as: "bookInfo"
+    }
+  },
+  { $unwind: "$bookInfo" },
+  {
+    $lookup: {
+      from: "users",
+      localField: "userId",
+      foreignField: "_id",
+      as: "userInfo"
+    }
+  },
+  { $unwind: "$userInfo" },
+  {
+    $project: {
+      _id: 0,
+      bookTitle: "$bookInfo.title",
+      userName: "$userInfo.name",
+      borrowDate: 1,
+      status: 1
+    }
+  }
+]);
+```
+
+## Bonus : nombre de livres empruntés par utilisateur
+
+```js
+db.borrowings.aggregate([
+  { $match: { status: "borrowed" } },
+  {
+    $group: {
+      _id: "$userId",
+      totalBorrowed: { $sum: 1 }
+    }
+  },
+  {
+    $lookup: {
+      from: "users",
+      localField: "_id",
+      foreignField: "_id",
+      as: "userInfo"
+    }
+  },
+  { $unwind: "$userInfo" },
+  {
+    $project: {
+      _id: 0,
+      userName: "$userInfo.name",
+      totalBorrowed: 1
+    }
+  }
+]).pretty();
 ```
