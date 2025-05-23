@@ -2,9 +2,9 @@
 
 ![Bannière MongoDB Query](img/mongodb-query.png "Bannière MongoDB Query"){ style="display: block; margin: 0 auto" }
 
----
-
 Cette partie du cours traite des **Mongodb queries** pour opérer directement sur la base de données mongo via le *shell*, un *mongodb client* ou un app N*odeJS* avec *MongoClient*. Avant d’aller plus loin, il faut préalablement avoir installé mongodb (voir guide d’installation [Windows](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/), [Mac](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/) ou Linux) et créé une base de données. Une base de donnée d'exercice est fournis dans le dossier ;) .
+
+---
 
 ## Requêtes de sélection (Queries de sélection)
 
@@ -14,6 +14,42 @@ Les requêtes de sélection permettent de retrouver un ou plusieurs documents da
 ```js
 db.nom_de_la_collection.find({ critère })
 ```
+
+### *pretty()* dans MongoDB
+
+La méthode *.pretty()* est utilisée dans **MongoDB Shell** (ou **mongosh**) pour afficher les résultats d'une requête au format lisible (indenté et structuré), comme du JSON bien formaté.
+
+**Exemple sans .pretty() :**
+```js
+db.products.find()
+```
+Renverra des **résultats sur une seule ligne**, **difficile à lire** si les documents sont **longs** ou **imbriqués** :
+```json
+{ "_id": ObjectId("..."), "name": "Chaise", "price": 49.99, "stock": 12, ... }
+{ "_id": ObjectId("..."), "name": "Canapé", "price": 199.99, "stock": 3, ... }
+```
+
+**Exemple avec .pretty() :**
+```js
+db.products.find().pretty()
+```
+Renverra des **résultats indentés**, **faciles à lire**, très utile surtout quand on a **des objets** ou **tableaux imbriqués** :
+```json
+{
+  "_id": ObjectId("..."),
+  "name": "Chaise",
+  "price": 49.99,
+  "stock": 12
+}
+{
+  "_id": ObjectId("..."),
+  "name": "Canapé",
+  "price": 199.99,
+  "stock": 3
+}
+```
+
+Dans **MongoDB Compass**, les résultats sont déjà formatés joliment, donc .pretty() **n’est pas nécessaire**.
 
 ### Requête basique
 
@@ -132,7 +168,7 @@ SELECT * FROM orders WHERE client = "Chiofalo Vincent" OR amount > 100000
 
 ### Pour aller plus loin
 
-#### $exists P(résence d’un champ)
+#### $exists (présence d’un champ)
 
 Permet de vérifier si un champ existe ou non dans un document.
 
@@ -205,6 +241,19 @@ db.orders.find({
 })
 ```
 
+### Encore plus loin (bonus)
+
+| Mots clés          | Concepts clés              | Liens                      |
+| ------------------ | -------------------------- | -------------------------- |
+| `$lookup`          | Jointure entre collections | [Documentation jointure (lookup)](https://www.mongodb.com/docs/manual/reference/operator/aggregation/lookup/) |
+| `$unwind`          | Dénormalisation de tableau | [Documentation aggrégation (unwind)](https://www.mongodb.com/docs/manual/reference/operator/aggregation/unwind/) |
+| `$group`           | Agrégation/statistiques    | [Documentation aggrégation (group)](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) |
+| `$dateToString`    | Manipulation de dates      | [Documentation aggrégation (dateToString)](https://www.mongodb.com/docs/v8.0/reference/operator/aggregation/dateToString/) |
+| `$sort` | Résultats ordonnés         | [Documentation aggrégation (sort)](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sort/) |
+| `$limit`  | Résultats ordonnés         | [Documentation aggrégation (limit)](https://www.mongodb.com/docs/manual/reference/operator/aggregation/limit/) |
+
+### Résumé simple
+
 | Opérateur    | Description                                         | Exemple                                                                       | Équivalent SQL                     |
 | ------------ | --------------------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------- |
 | `$eq`        | Égal à                                              | `{ status: "D" }`                                                             | `= 'D'`                            |
@@ -217,3 +266,13 @@ db.orders.find({
 | `$regex`     | Recherche textuelle avec expression régulière       | `{ client: { $regex: /^Chi/i } }`                                             | `LIKE 'Chi%'`                      |
 | `$elemMatch` | Condition multiple sur un même élément d’un tableau | `{ items: { $elemMatch: { sku: "27' 4K Monitor", price: { $gt: 50000 } } } }` | N/A (pas équivalent direct en SQL) |
 | `$size`      | Nombre exact d’éléments dans un tableau             | `{ items: { $size: 2 } }`                                                     | N/A                                |
+
+
+### Exercices
+
+Faites les exercices de **niveau 1** et de **niveau 2** (**niveau 3 bonus** - *correction fournis en fin module*) du fichier [exo-queries.md](exo-queries.md)
+
+---
+
+*Sources :*
+*- mongodb*
