@@ -17,6 +17,16 @@ db.createView("produits_en_stock", "products", [
 ])
 ```
 
+Pour voir la vue :
+```js
+db.produits_en_stock.find().pretty()
+```
+
+Pour supprimer la vue :
+```js
+db.produits_en_stock.drop()
+```
+
 ## Read-Only View *commandes_payées*
 
 ```js
@@ -33,9 +43,17 @@ db.createView("commandes_payees", "orders", [
   }
 ])
 ```
-
+Pour voir les vues :
 ```js
-db.produits_en_stock.find().pretty()
+db.commandes_payees.find().pretty()
+```
+```js
+db.orders.find().pretty()
+```
+
+Pour supprimer la vue :
+```js
+db.commandes_payees.drop()
 ```
 
 ## Materialized View *top_clients*
@@ -58,6 +76,11 @@ db.top_clients.insertMany(topClients);
 
 ```js
 db.top_clients.find().pretty()
+```
+
+Pour supprimer la vue :
+```js
+db.top_clients.drop()
 ```
 
 <!-- ## Bonus - Automatisation (concept) -->

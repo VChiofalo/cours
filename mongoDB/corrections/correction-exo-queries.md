@@ -31,7 +31,6 @@ db.products.find({ price: { $lt: 20 } })
 db.orders.find({ status: { $in: ["paid", "shipped"] } })
 ```
 
-
 - Listez les produits qui ont un *stock supérieur à 10* et un *prix inférieur à 50€*.
 ```js
 db.products.find({
@@ -83,8 +82,8 @@ db.users.find({
 - Récupèrez les produits dont la catégorie appartient à une liste spécifique d'_id (ex. catégories "Vêtements" ou "Livres"), en utilisant *$in*.
 ```js
 const ids = [
-  ObjectId("..."),
-  ObjectId("...")
+  ObjectId("68307a086234a1f4a7ed3798"),
+  ObjectId("68307a086234a1f4a7ed3795")
 ];
 
 db.products.find({
@@ -92,11 +91,13 @@ db.products.find({
 })
 ```
 
-- Trouvez toutes les commandes dont la ville de livraison est "Paris" et le statut est "paid".
+- Trouvez toutes les commandes dont la ville de livraison est "Palatine" et le statut est "paid".
 ```js
 db.orders.find({
-  "address.city": "Paris",
-  status: "paid"
+  $and: [
+    { "address.city": "Palatine" },
+    { status: "paid" }
+  ]
 })
 ```
 
@@ -115,28 +116,6 @@ db.users.find({
 *Remplace "createdAt.$date" par "createdAt" si les dates sont déjà de vrais objets Date en base.*
 
 ## Niveau 3 (bonus)
-
-- Récupèrez les produits avec leur nom de catégorie (jointure entre products et categories).
-```js
-db.products.aggregate([
-  {
-    $lookup: {
-      from: "categories",
-      localField: "category",
-      foreignField: "_id",
-      as: "categorie"
-    }
-  },
-  { $unwind: "$categorie" },
-  {
-    $project: {
-      name: 1,
-      price: 1,
-      "categorie.name": 1
-    }
-  }
-])
-```
 
 - Jointure entre *orders* et *users* pour afficher :
     - l’email et le nom de l’utilisateur
