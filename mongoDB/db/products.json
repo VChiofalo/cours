@@ -1,0 +1,902 @@
+[
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed3799"
+    },
+    "name": "Fresh Aluminum Bacon",
+    "description": "Savor the fresh essence in our Ball, designed for supportive culinary adventures",
+    "price": 198.95,
+    "stock": 163,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3797"
+    },
+    "images": [
+      "https://loremflickr.com/1906/1644?lock=1983880085438660"
+    ],
+    "createdAt": {
+      "$date": "2025-04-29T13:37:12.376Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed379a"
+    },
+    "name": "Handcrafted Plastic Chicken",
+    "description": "Savor the spicy essence in our Towels, designed for serene culinary adventures",
+    "price": 361.45,
+    "stock": 148,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/mb1iUBGw5/1518/2178"
+    ],
+    "createdAt": {
+      "$date": "2025-05-09T13:37:12.376Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed379b"
+    },
+    "name": "Unbranded Cotton Ball",
+    "description": "The tan Bacon combines Montenegro aesthetics with Samarium-based durability",
+    "price": 462.09,
+    "stock": 175,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3797"
+    },
+    "images": [
+      "https://loremflickr.com/3142/2441?lock=1646355474295989"
+    ],
+    "createdAt": {
+      "$date": "2025-04-23T13:37:12.377Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed379c"
+    },
+    "name": "Sleek Granite Keyboard",
+    "description": "Keebler - Robel's most advanced Sausages technology increases frugal capabilities",
+    "price": 125.69,
+    "stock": 141,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://loremflickr.com/2295/3414?lock=6386039398713359"
+    ],
+    "createdAt": {
+      "$date": "2025-05-05T13:37:12.377Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed379d"
+    },
+    "name": "Generic Gold Bacon",
+    "description": "Ergonomic Pizza made with Bamboo for all-day usable support",
+    "price": 338.35,
+    "stock": 4,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3794"
+    },
+    "images": [
+      "https://loremflickr.com/3855/2812?lock=8332087049406289"
+    ],
+    "createdAt": {
+      "$date": "2025-05-01T13:37:12.377Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed379e"
+    },
+    "name": "Frozen Bamboo Mouse",
+    "description": "Ergonomic Shoes made with Gold for all-day puny support",
+    "price": 90.85,
+    "stock": 184,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/bs73QhBXxV/893/3162"
+    ],
+    "createdAt": {
+      "$date": "2025-05-16T13:37:12.377Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed379f"
+    },
+    "name": "Sleek Rubber Hat",
+    "description": "The fuchsia Pants combines South Georgia and the South Sandwich Islands aesthetics with Lawrencium-based durability",
+    "price": 345.09,
+    "stock": 178,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/DcpnSOs/384/1769"
+    ],
+    "createdAt": {
+      "$date": "2025-04-23T13:37:12.377Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a0"
+    },
+    "name": "Fantastic Steel Chair",
+    "description": "New Sausages model with 38 GB RAM, 977 GB storage, and angelic features",
+    "price": 64.82,
+    "stock": 75,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3794"
+    },
+    "images": [
+      "https://loremflickr.com/2809/2660?lock=2745140517432317"
+    ],
+    "createdAt": {
+      "$date": "2025-04-23T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a1"
+    },
+    "name": "Modern Cotton Gloves",
+    "description": "New Shirt model with 40 GB RAM, 984 GB storage, and quiet features",
+    "price": 380.29,
+    "stock": 99,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://picsum.photos/seed/guhBxQ9R/3212/1396"
+    ],
+    "createdAt": {
+      "$date": "2025-05-16T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a2"
+    },
+    "name": "Small Bronze Car",
+    "description": "Handcrafted Sausages designed with Steel for aggravating performance",
+    "price": 498.69,
+    "stock": 79,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://picsum.photos/seed/U0HfW/249/3376"
+    ],
+    "createdAt": {
+      "$date": "2025-05-09T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a3"
+    },
+    "name": "Tasty Aluminum Shoes",
+    "description": "Experience the sky blue brilliance of our Shirt, perfect for mild environments",
+    "price": 102.09,
+    "stock": 6,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://loremflickr.com/3493/44?lock=6932971484317442"
+    ],
+    "createdAt": {
+      "$date": "2025-04-28T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a4"
+    },
+    "name": "Recycled Metal Tuna",
+    "description": "Discover the unlawful new Cheese with an exciting mix of Granite ingredients",
+    "price": 40.29,
+    "stock": 119,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/4Rl4YOpyB/2203/3959"
+    ],
+    "createdAt": {
+      "$date": "2025-05-04T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a5"
+    },
+    "name": "Soft Bronze Chicken",
+    "description": "Discover the penguin-like agility of our Car, perfect for muddy users",
+    "price": 282.79,
+    "stock": 37,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://picsum.photos/seed/9xc8wOXqco/1618/614"
+    ],
+    "createdAt": {
+      "$date": "2025-05-15T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a6"
+    },
+    "name": "Generic Cotton Tuna",
+    "description": "Discover the oval new Bike with an exciting mix of Metal ingredients",
+    "price": 189.59,
+    "stock": 43,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/bswMtAZOwK/2140/3140"
+    ],
+    "createdAt": {
+      "$date": "2025-05-03T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a7"
+    },
+    "name": "Sleek Ceramic Keyboard",
+    "description": "The sleek and portly Keyboard comes with pink LED lighting for smart functionality",
+    "price": 264.25,
+    "stock": 22,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/UgAqs/3461/1216"
+    ],
+    "createdAt": {
+      "$date": "2025-05-15T13:37:12.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a8"
+    },
+    "name": "Ergonomic Bronze Ball",
+    "description": "The Quality-focused needs-based monitoring Keyboard offers reliable performance and giving design",
+    "price": 75.55,
+    "stock": 50,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://picsum.photos/seed/kRzW802fM/1679/1966"
+    ],
+    "createdAt": {
+      "$date": "2025-05-22T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37a9"
+    },
+    "name": "Unbranded Metal Pants",
+    "description": "The turquoise Bike combines Panama aesthetics with Gallium-based durability",
+    "price": 220.65,
+    "stock": 93,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://picsum.photos/seed/rdh1UF18/177/2249"
+    ],
+    "createdAt": {
+      "$date": "2025-05-08T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37aa"
+    },
+    "name": "Luxurious Bamboo Ball",
+    "description": "The sleek and lumpy Soap comes with white LED lighting for smart functionality",
+    "price": 413.89,
+    "stock": 143,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3797"
+    },
+    "images": [
+      "https://loremflickr.com/2241/267?lock=5238272636285857"
+    ],
+    "createdAt": {
+      "$date": "2025-05-01T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37ab"
+    },
+    "name": "Handmade Aluminum Soap",
+    "description": "Introducing the Ghana-inspired Shirt, blending only style with local craftsmanship",
+    "price": 234.39,
+    "stock": 187,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://loremflickr.com/3486/2224?lock=4364108825849286"
+    ],
+    "createdAt": {
+      "$date": "2025-05-07T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37ac"
+    },
+    "name": "Electronic Steel Sausages",
+    "description": "The Abby Keyboard is the latest in a series of speedy products from Lindgren and Sons",
+    "price": 87.3,
+    "stock": 60,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3794"
+    },
+    "images": [
+      "https://loremflickr.com/218/1959?lock=8766908536667560"
+    ],
+    "createdAt": {
+      "$date": "2025-05-15T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37ad"
+    },
+    "name": "Soft Bronze Tuna",
+    "description": "Experience the yellow brilliance of our Car, perfect for extra-large environments",
+    "price": 171.55,
+    "stock": 92,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3794"
+    },
+    "images": [
+      "https://loremflickr.com/3838/34?lock=3375816872478735"
+    ],
+    "createdAt": {
+      "$date": "2025-04-28T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37ae"
+    },
+    "name": "Luxurious Bronze Tuna",
+    "description": "Discover the ambitious new Ball with an exciting mix of Aluminum ingredients",
+    "price": 242.39,
+    "stock": 60,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3794"
+    },
+    "images": [
+      "https://picsum.photos/seed/J2HlBvYFP/1093/1804"
+    ],
+    "createdAt": {
+      "$date": "2025-04-23T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37af"
+    },
+    "name": "Small Aluminum Computer",
+    "description": "Introducing the Svalbard & Jan Mayen Islands-inspired Soap, blending moral style with local craftsmanship",
+    "price": 47.2,
+    "stock": 150,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://picsum.photos/seed/orVQCV/2245/1435"
+    ],
+    "createdAt": {
+      "$date": "2025-04-30T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b0"
+    },
+    "name": "Modern Silk Soap",
+    "description": "Discover the accomplished new Shoes with an exciting mix of Aluminum ingredients",
+    "price": 96.55,
+    "stock": 137,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://picsum.photos/seed/j6pU4h4Zkk/616/3527"
+    ],
+    "createdAt": {
+      "$date": "2025-05-04T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b1"
+    },
+    "name": "Awesome Plastic Salad",
+    "description": "Introducing the Israel-inspired Towels, blending blank style with local craftsmanship",
+    "price": 458.75,
+    "stock": 65,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://loremflickr.com/2345/2337?lock=6828124695000169"
+    ],
+    "createdAt": {
+      "$date": "2025-05-05T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b2"
+    },
+    "name": "Licensed Metal Sausages",
+    "description": "New Chicken model with 5 GB RAM, 935 GB storage, and worse features",
+    "price": 452.05,
+    "stock": 61,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://loremflickr.com/454/226?lock=2791871496676645"
+    ],
+    "createdAt": {
+      "$date": "2025-05-04T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b3"
+    },
+    "name": "Sleek Rubber Keyboard",
+    "description": "Discover the jaunty new Cheese with an exciting mix of Concrete ingredients",
+    "price": 204.59,
+    "stock": 18,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3794"
+    },
+    "images": [
+      "https://loremflickr.com/512/491?lock=4961743940676587"
+    ],
+    "createdAt": {
+      "$date": "2025-04-27T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b4"
+    },
+    "name": "Incredible Silk Towels",
+    "description": "Innovative Towels featuring snappy technology and Gold construction",
+    "price": 255.4,
+    "stock": 167,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/kPKY8UJVTw/3632/1140"
+    ],
+    "createdAt": {
+      "$date": "2025-05-10T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b5"
+    },
+    "name": "Unbranded Cotton Fish",
+    "description": "Professional-grade Shirt perfect for teeming training and recreational use",
+    "price": 74.94,
+    "stock": 68,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://loremflickr.com/1850/92?lock=8999731704038331"
+    ],
+    "createdAt": {
+      "$date": "2025-05-08T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b6"
+    },
+    "name": "Handcrafted Bamboo Pizza",
+    "description": "Discover the determined new Shoes with an exciting mix of Bamboo ingredients",
+    "price": 335.05,
+    "stock": 110,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/SSsiTE/724/2848"
+    ],
+    "createdAt": {
+      "$date": "2025-05-18T13:37:12.379Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b7"
+    },
+    "name": "Handmade Rubber Chair",
+    "description": "Discover the giraffe-like agility of our Table, perfect for only users",
+    "price": 455.35,
+    "stock": 30,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3797"
+    },
+    "images": [
+      "https://loremflickr.com/835/608?lock=4808232075114862"
+    ],
+    "createdAt": {
+      "$date": "2025-05-15T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b8"
+    },
+    "name": "Rustic Plastic Tuna",
+    "description": "Our bat-friendly Car ensures cheerful comfort for your pets",
+    "price": 314.69,
+    "stock": 84,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://loremflickr.com/3224/1615?lock=385130077384194"
+    ],
+    "createdAt": {
+      "$date": "2025-04-28T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37b9"
+    },
+    "name": "Recycled Plastic Salad",
+    "description": "New Ball model with 31 GB RAM, 710 GB storage, and splendid features",
+    "price": 339.99,
+    "stock": 118,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://loremflickr.com/1935/2910?lock=3731060416370658"
+    ],
+    "createdAt": {
+      "$date": "2025-05-15T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37ba"
+    },
+    "name": "Unbranded Marble Pizza",
+    "description": "Stylish Chair designed to make you stand out with agitated looks",
+    "price": 397.15,
+    "stock": 158,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://picsum.photos/seed/xZOUFc/2736/2509"
+    ],
+    "createdAt": {
+      "$date": "2025-05-16T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37bb"
+    },
+    "name": "Fresh Bamboo Chair",
+    "description": "Savor the savory essence in our Fish, designed for gifted culinary adventures",
+    "price": 368.75,
+    "stock": 114,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://loremflickr.com/513/499?lock=3384582904382417"
+    ],
+    "createdAt": {
+      "$date": "2025-05-22T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37bc"
+    },
+    "name": "Electronic Rubber Gloves",
+    "description": "Kuphal - Yost's most advanced Salad technology increases idolized capabilities",
+    "price": 428.89,
+    "stock": 136,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://loremflickr.com/3089/2715?lock=1870042448232453"
+    ],
+    "createdAt": {
+      "$date": "2025-05-12T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37bd"
+    },
+    "name": "Handcrafted Metal Chicken",
+    "description": "Professional-grade Pants perfect for orange training and recreational use",
+    "price": 418.39,
+    "stock": 6,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3797"
+    },
+    "images": [
+      "https://loremflickr.com/2681/684?lock=6641075081387726"
+    ],
+    "createdAt": {
+      "$date": "2025-05-05T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37be"
+    },
+    "name": "Rustic Concrete Pants",
+    "description": "The Customizable responsive function Shoes offers reliable performance and evil design",
+    "price": 307.85,
+    "stock": 185,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://loremflickr.com/120/1712?lock=2682751594599678"
+    ],
+    "createdAt": {
+      "$date": "2025-04-25T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37bf"
+    },
+    "name": "Sleek Granite Towels",
+    "description": "Introducing the Comoros-inspired Car, blending worthy style with local craftsmanship",
+    "price": 8.09,
+    "stock": 106,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://loremflickr.com/2368/2574?lock=7786632175218958"
+    ],
+    "createdAt": {
+      "$date": "2025-05-13T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c0"
+    },
+    "name": "Modern Concrete Pants",
+    "description": "Pfannerstill - Ratke's most advanced Soap technology increases smooth capabilities",
+    "price": 183.09,
+    "stock": 149,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://loremflickr.com/369/2944?lock=8602626917823542"
+    ],
+    "createdAt": {
+      "$date": "2025-05-08T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c1"
+    },
+    "name": "Rustic Granite Chips",
+    "description": "New violet Pizza with ergonomic design for grim comfort",
+    "price": 46.79,
+    "stock": 70,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://picsum.photos/seed/5UQEJ/2938/1733"
+    ],
+    "createdAt": {
+      "$date": "2025-05-09T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c2"
+    },
+    "name": "Electronic Concrete Salad",
+    "description": "New plum Pants with ergonomic design for uneven comfort",
+    "price": 28.55,
+    "stock": 115,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://picsum.photos/seed/TS0PlvF/3256/1936"
+    ],
+    "createdAt": {
+      "$date": "2025-05-08T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c3"
+    },
+    "name": "Oriental Gold Shoes",
+    "description": "Ergonomic Cheese made with Cotton for all-day animated support",
+    "price": 134.29,
+    "stock": 3,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3794"
+    },
+    "images": [
+      "https://picsum.photos/seed/xBJGCHan/649/2507"
+    ],
+    "createdAt": {
+      "$date": "2025-05-11T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c4"
+    },
+    "name": "Handcrafted Cotton Towels",
+    "description": "The Robust intangible capacity Chicken offers reliable performance and gifted design",
+    "price": 136.09,
+    "stock": 59,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3796"
+    },
+    "images": [
+      "https://loremflickr.com/3335/2333?lock=5726005948929429"
+    ],
+    "createdAt": {
+      "$date": "2025-05-16T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c5"
+    },
+    "name": "Fresh Marble Car",
+    "description": "The Mathias Car is the latest in a series of musty products from Dickens, Veum and Harber",
+    "price": 315.69,
+    "stock": 175,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3797"
+    },
+    "images": [
+      "https://picsum.photos/seed/I5JUbEqWZ/266/2080"
+    ],
+    "createdAt": {
+      "$date": "2025-04-29T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c6"
+    },
+    "name": "Handmade Marble Cheese",
+    "description": "Discover the exotic new Tuna with an exciting mix of Wooden ingredients",
+    "price": 413.39,
+    "stock": 117,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/3bZfgbV/2282/3079"
+    ],
+    "createdAt": {
+      "$date": "2025-04-26T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c7"
+    },
+    "name": "Elegant Silk Shoes",
+    "description": "Ergonomic Hat made with Bamboo for all-day unripe support",
+    "price": 16.65,
+    "stock": 159,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/EAGHX24n/2109/3310"
+    ],
+    "createdAt": {
+      "$date": "2025-05-08T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c8"
+    },
+    "name": "Small Silk Soap",
+    "description": "Featuring Iron-enhanced technology, our Shirt offers unparalleled bogus performance",
+    "price": 399.39,
+    "stock": 60,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3795"
+    },
+    "images": [
+      "https://picsum.photos/seed/wU87OgFZW/2563/506"
+    ],
+    "createdAt": {
+      "$date": "2025-05-21T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37c9"
+    },
+    "name": "Elegant Ceramic Ball",
+    "description": "Introducing the Isle of Man-inspired Towels, blending trivial style with local craftsmanship",
+    "price": 307.89,
+    "stock": 0,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://loremflickr.com/2457/1945?lock=7116322867539166"
+    ],
+    "createdAt": {
+      "$date": "2025-05-01T13:37:12.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68307a086234a1f4a7ed37ca"
+    },
+    "name": "Rustic Rubber Car",
+    "description": "Introducing the Afghanistan-inspired Fish, blending front style with local craftsmanship",
+    "price": 101.19,
+    "stock": 104,
+    "category": {
+      "$oid": "68307a086234a1f4a7ed3798"
+    },
+    "images": [
+      "https://picsum.photos/seed/ijN1kE/3353/1561"
+    ],
+    "createdAt": {
+      "$date": "2025-05-11T13:37:12.380Z"
+    }
+  }
+]
