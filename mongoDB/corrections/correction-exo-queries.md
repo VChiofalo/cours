@@ -31,7 +31,6 @@ db.products.find({ price: { $lt: 20 } })
 db.orders.find({ status: { $in: ["paid", "shipped"] } })
 ```
 
-
 - Listez les produits qui ont un *stock supérieur à 10* et un *prix inférieur à 50€*.
 ```js
 db.products.find({
@@ -83,8 +82,8 @@ db.users.find({
 - Récupèrez les produits dont la catégorie appartient à une liste spécifique d'_id (ex. catégories "Vêtements" ou "Livres"), en utilisant *$in*.
 ```js
 const ids = [
-  ObjectId("..."),
-  ObjectId("...")
+  ObjectId("68307a086234a1f4a7ed3798"),
+  ObjectId("68307a086234a1f4a7ed3795")
 ];
 
 db.products.find({
@@ -92,11 +91,13 @@ db.products.find({
 })
 ```
 
-- Trouvez toutes les commandes dont la ville de livraison est "Paris" et le statut est "paid".
+- Trouvez toutes les commandes dont la ville de livraison est "Palatine" et le statut est "paid".
 ```js
 db.orders.find({
-  "address.city": "Paris",
-  status: "paid"
+  $and: [
+    { "address.city": "Palatine" },
+    { status: "paid" }
+  ]
 })
 ```
 

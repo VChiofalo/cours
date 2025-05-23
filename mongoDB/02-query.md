@@ -267,6 +267,9 @@ db.orders.find({
 | `$elemMatch` | Condition multiple sur un même élément d’un tableau | `{ items: { $elemMatch: { sku: "27' 4K Monitor", price: { $gt: 50000 } } } }` | N/A (pas équivalent direct en SQL) |
 | `$size`      | Nombre exact d’éléments dans un tableau             | `{ items: { $size: 2 } }`                                                     | N/A                                |
 
+### Installation
+
+Avant de pratiquer avec MongoDB, il va nous falloir l'installer. Allez au fichier [install.md](install.md)
 
 ### Exercices
 
