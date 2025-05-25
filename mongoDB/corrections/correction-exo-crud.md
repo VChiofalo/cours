@@ -26,7 +26,7 @@ db.orders.find({ "status": "pending" })
 
 - Trouver toutes les critiques (*reviews*) d’un produit donné (par exemple avec un _id connu).
 ```js
-db.reviews.find({ productId: ObjectId("PRODUCT_ID") })
+db.reviews.find({ _id: ObjectId("REVIEWS_ID") })
 ```
 
 ### Read - Recherche avancée et projection
@@ -85,12 +85,12 @@ db.categories.insertOne({
 ```js
 db.products.insertOne({
   _id: ObjectId(),
-  name: "Super Robot",
-  description: "Robot télécommandé pour enfants",
+  name: 'Super Robot',
+  description: 'Robot télécommandé pour enfants',
   price: 49.99,
   stock: 100,
-  category: ObjectId("JOUEURS_ID"),
-  images: ["http://example.com/robot.jpg"],
+  category: ObjectId("CATEGORY_ID"),
+  images: ['http://example.com/robot.jpg'],
   createdAt: new Date()
 })
 ```
@@ -103,7 +103,7 @@ db.orders.insertOne({
   products: [
     { productId: ObjectId("PRODUCT_ID"), quantity: 2 }
   ],
-  total: 99.98,
+  total: 49.99,
   status: "pending",
   createdAt: new Date(),
   address: {
@@ -113,6 +113,29 @@ db.orders.insertOne({
     country: "France"
   }
 })
+```
+Ce que l'on aurais par exemple avec un BACK connecté à notre collection :
+```js
+const product = await db.collection("products").findOne({ _id: productId });
+
+const quantity = 2;
+const total = product.price * quantity;
+
+await db.collection("orders").insertOne({
+  userId: new ObjectId("68334848d15eb02b436c4bd0"),
+  products: [
+    { productId: product._id, quantity }
+  ],
+  total,
+  status: "pending",
+  createdAt: new Date(),
+  address: {
+    street: "10 rue de Paris",
+    city: "Paris",
+    postalCode: "75000",
+    country: "France"
+  }
+});
 ```
 
 - Ajouter une review pour un produit existant par un utilisateur existant.
