@@ -240,6 +240,16 @@ MongoDB sera donc très performant avec des **applications à fort traffic** (e-
 
 ---
 
+## Lexique MongoDB vs SQL
+
+| Terme      | MongoDB                          | SQL (comparaison)      |
+| ---------- | -------------------------------- | ---------------------- |
+| Base       | Base de données                  | Base de données        |
+| Collection | Ensemble de documents            | Table                  |
+| Document   | Enregistrement individuel (JSON) | Ligne / enregistrement |
+
+---
+
 ## Installation 
 
 Pour la suite, il va nous falloir installer MongoDB. Suivez le lien d'installation suivant !

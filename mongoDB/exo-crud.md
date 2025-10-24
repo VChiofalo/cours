@@ -7,7 +7,7 @@
 Pour les champs _id ou références { $oid: "..." }, vous devrez utiliser les ObjectId réels du jeu de données (extraits depuis tes fichiers JSON ou la base).
 Exemple :
 ```js
-db.users.findOne({ userId: ObjectId("USER_ID") })
+db.users.findOne({ _id: ObjectId("68307a086234a1f4a7ed3783") })
 ```
 
 ### Read - Lecture simple

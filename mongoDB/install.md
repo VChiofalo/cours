@@ -96,7 +96,7 @@ Votre installation est 100 % fonctionnelle 🎉
 
 ## Import BDD
 
-Pour importer la base de donnée qui va nous servir à nous exercer, ouvrez un terminal dans le dossier qui contient la db (ici mongo/db) et entrez ces commandes une à une :
+Pour importer la base de donnée qui va nous servir à nous exercer, ouvrez un terminal dans le dossier qui contient la db (ici mongo/collection) et entrez ces commandes une à une :
 ```bash
 mongoimport --db ecommerce --collection users --file users.json --jsonArray
 mongoimport --db ecommerce --collection products --file products.json --jsonArray
