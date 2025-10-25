@@ -173,3 +173,7 @@ D'autres instructions existes mais nous n'approfrondirons pas ces notions ici. S
 
 ###### *sources* :
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+
+---
+
+© Vincent Chiofalo

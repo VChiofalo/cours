@@ -251,3 +251,7 @@ Chaque méthode a son utilité :
 - ```reduce()``` sert à **résumer** ou **combiner** les valeurs d’un tableau en un seul résultat.
 
 En combinant ces outils, vous disposez désormais de tout ce qu’il faut pour manipuler efficacement les tableaux et les adapter aux besoins de vos programmes.
+
+---
+
+© Vincent Chiofalo

@@ -310,3 +310,7 @@ Amusez-vous, trifouillez, bidouillez, expérimentez, pratiquez.
     - `Math.random()` : pour obtenir un nombre aléatoire (de 0 à 1)
     - `Math.PI` : *pi*
     - `Math.sqrt()` : pour faire trouver la racine carrée d'un nombre
+
+---
+
+© Vincent Chiofalo

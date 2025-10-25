@@ -360,3 +360,7 @@ N'hésitez pas à ouvrir le fichier `les-variables.js` et à le modifier à volo
     - *float* : les nombres à virgule
     - *boolean* : les booléens, `true` ou `false`
 - Il est *propre* de mettre `null` comme valeur par défaut si on ne sait pas encore quoi mettre
+
+---
+
+© Vincent Chiofalo

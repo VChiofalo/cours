@@ -84,3 +84,7 @@ Pour tester le module, exécutez la commande suivante : `node .\test-prompt.js`.
 Si le terminal vous demande votre prénom et vous souhaite la bienvenue, c'est que tout fonctionne très bien.
 
 Vous êtes prêt pour attaquer votre introduction à JavaScript.
+
+---
+
+© Vincent Chiofalo

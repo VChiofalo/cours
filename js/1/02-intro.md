@@ -56,3 +56,7 @@ Et au-delà du navigateur, JavaScript peut aussi être utilisé pour développer
 - Actuellement, JavaScript occupe une position unique en tant que langage de navigateur le plus largement adopté avec une intégration complète avec HTML/CSS.
 
 ![JavaScript est partout](img/javascript-everywhere.jpg){ style="display: block; margin: 0 auto" }
+
+---
+
+© Vincent Chiofalo

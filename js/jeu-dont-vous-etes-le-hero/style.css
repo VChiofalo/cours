@@ -1,0 +1,51 @@
+body{
+    width: 70%;
+    margin: 0 auto;
+}
+
+header, footer, main{
+    background-color: #c3bebd;
+}
+
+footer p{
+    margin: 0;
+    padding: 20px 0;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+header img{
+    width: 20%;
+}
+
+main img{
+    width: 40%;
+    border: 6px solid rgb(88, 86, 95);
+    margin: 20px 0;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+    color: #7577aa;
+}
+
+#story{
+    width: 80%;
+    min-height: 280px;
+    margin: 0 auto;
+}
+
+#story{
+    border: 6px solid rgb(30, 30, 32);
+}

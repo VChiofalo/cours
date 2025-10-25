@@ -102,3 +102,7 @@ D'autres instructions existes mais nous n'approfrondirons pas ces notions ici. S
 
 ###### *sources* :
     - https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Loops_and_iteration
+
+---
+
+© Vincent Chiofalo
