@@ -95,7 +95,7 @@ db.products.find({
 ```js
 db.orders.find({
   $and: [
-    { "address.city": "Palatine" },
+    { "address.city": "Paris" },
     { status: "paid" }
   ]
 })
