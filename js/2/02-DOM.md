@@ -22,7 +22,7 @@ Dans cette hiérarchie :
 
 | Terme                  | Définition                                                                  |
 | ---------------------- | --------------------------------------------------------------------------- |
-| **Racine (root)**      | Le nœud de plus haut niveau, généralement la balise ```<html>```.               |
+| **Racine (root)**      | Le nœud de plus haut niveau, généralement la balise ```<html>```.           |
 | **Parent**             | Un nœud qui contient directement un ou plusieurs autres nœuds.              |
 | **Enfant (child)**     | Un nœud situé directement à l’intérieur d’un autre.                         |
 | **Descendant**         | Un nœud situé n’importe où à l’intérieur d’un autre (pas forcément direct). |
