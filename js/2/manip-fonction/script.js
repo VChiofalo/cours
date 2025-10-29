@@ -2,7 +2,6 @@
 
 // 1 - Crée une fonction 'direBonjour()' qui affiche "Bonjour à tous !" dans la console.
 // 2 - Appelle cette fonction plusieurs fois dans ton code.
-// 3 - Modifie le message pour afficher "Bonjour le monde !".
 
 
 /**** Fonction avec paramètres ****/
@@ -42,4 +41,4 @@
 /**** Encore du bonus ****/
 
 // 1 - Crée une fonction estMajeur(age) qui retourne true si l’âge est ≥ 18, sinon false.
-// 2 - Utilise cette fonction dans presentation() pour compléter la phrase :
+// 2 - Utilise cette fonction dans presentation() pour compléter la phrase : "Je suis majeur" ou "Je suis mineur".
