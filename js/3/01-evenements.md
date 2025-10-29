@@ -411,3 +411,7 @@ Cible : btn
 ## Pratique
 
 Dans le dossier ```manip-events```, regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
+
+---
+
+© Vincent Chiofalo

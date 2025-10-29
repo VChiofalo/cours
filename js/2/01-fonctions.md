@@ -95,3 +95,11 @@ console.log(somme); // 30
 
 console.log(additionner(10, 20)); // 30
 ```
+
+## Pratique
+
+Dans le dossier ```manip-fonctions```, regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
+
+---
+
+© Vincent Chiofalo

@@ -256,3 +256,6 @@ element.removeChild(enfantASupprimer);
 
 Il est grand tant de passer à la pratique. Dans le dossier ```manip-dom```, regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
 
+---
+
+© Vincent Chiofalo
