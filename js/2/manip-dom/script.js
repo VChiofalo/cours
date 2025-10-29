@@ -7,7 +7,7 @@ bouton.addEventListener('click', () => {
 
   // 2 - Modifie la couleur (en bleu) et la taille (18px) du premier paragraphe
 
-  // 3 - Ajoute la classe "higlight" à tout les paragraphes qui ont la classe ".texte"
+  // 3 - Ajoute la classe "highlight" à tout les paragraphes qui ont la classe ".texte"
 
   // 4 - Cache le deuxième paragraphe (ou fait le réappaître)
 
@@ -17,5 +17,5 @@ bouton.addEventListener('click', () => {
 
   // Bonus 1 - Fais changer la couleur du titre à chaque clic avec une couleur aléatoire
 
-  // bonus 2 - Alterne entre deux images à chaque clic
+  // bonus 2 - Alterne entre deux images à chaque clic (pense à commenter ton code pour l'exo 6)
 });
