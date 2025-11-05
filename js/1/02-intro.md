@@ -1,4 +1,4 @@
-# Introduction à JavaScript
+npm install 'prompt-sync'# Introduction à JavaScript
 ![JavaScript](img/javascript.jpg)
 
 ## Qu'est ce que JavaScript ?

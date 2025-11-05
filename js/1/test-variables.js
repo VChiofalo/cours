@@ -10,6 +10,7 @@ annee = 1815;
 prenom = 'Ada';
 nom = 'Lovelace';
 
+
             /*** Déclaration + affectation ***/
 let humeur = 'joyeux';
 let today = 'aujourd\'hui';

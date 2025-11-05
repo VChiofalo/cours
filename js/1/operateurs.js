@@ -9,12 +9,12 @@ let multiplicateur = 10;
 let random = 'Multiplié aléatoirement le multiplicateur';
 let cote1 = 4;
 let cote2 = 3;
-let hypotenuse =  'Calculer hypotenuse avec les deux cotés fournis'; 
+let hypotenuse =  'Calculer hypotenuse avec les deux cotés fournis '; 
 const pi = 'Pi : ';
 
 let prenom = 'Ada';
 let nom = 'Lovelace';
-let nomComplet = ;
+let nomComplet =;
 
 // Opérations simples
     
