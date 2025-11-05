@@ -433,7 +433,7 @@ function sceneMagicien() {
     const choix3 = document.createElement("p");
     choix3.textContent = "L\'ombre";
     choix3.addEventListener("click", () => {
-        desintegre();
+        mort(texteMagicienMort);
     });
 
     // Ajoute les choix à la page
