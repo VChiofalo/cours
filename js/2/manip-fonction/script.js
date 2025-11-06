@@ -9,7 +9,6 @@
 // 1 - Crée une fonction 'direBonjourPrenom(prenom)' qui affiche : "Bonjour, [prénom] !"
 // 2 - Appelle la fonction plusieurs fois avec différents prénoms (ex. "Alice", "Lucas", "Samira").
 
-
 /**** Fonction avec plusieurs paramètres ****/
 
 // 1 - Crée une fonction afficherNomComplet(prenom, nom) qui affiche le nom complet dans la console. Exemple : afficherNomComplet("Emma", "Dubois"); → affiche "Emma Dubois".
