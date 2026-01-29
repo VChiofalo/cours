@@ -105,6 +105,8 @@ Les API sont donc **essentielles** car elles permettent d’**automatiser des t�
 
 ### Automatisation des tâches et processus répétitifs
 
+![Automatisation](img/automatisation.jpg){ style="display: block; margin: 0 auto" }
+
 Les API sont particulièrement utiles pour **automatiser des tâches répétitives** sans intervention humaine. Elles permettent aux systèmes de **communiquer et d’agir automatiquement** selon des conditions définies.
 
 Par exemple, une plateforme d’automatisation marketing peut utiliser des API pour **extraire des données d’analyse depuis plusieurs sources, générer des rapports et envoyer des notifications à l’équipe**, le tout automatiquement. De la même manière, dans le traitement des paiements, les API permettent de **traiter les transactions de façon automatique**, réduisant la charge opérationnelle.
@@ -120,6 +122,8 @@ Un exemple concret : un site immobilier peut intégrer des API de plusieurs sour
 Cette capacité d’intégration est particulièrement importante dans les entreprises où différents services utilisent des systèmes distincts. En facilitant la communication entre ces systèmes via des API, les organisations peuvent **unifier leurs flux de travail, améliorer la collaboration et réduire les erreurs liées à la saisie manuelle**.
 
 ### Accès aux données et services distants
+
+![Donnéees](img/data.png){ style="display: block; margin: 0 auto" }
 
 Les API permettent d’**accéder de manière standardisée à des données et services hébergés sur des serveurs distants**, sans avoir à gérer directement ces ressources. Grâce à elles, les entreprises peuvent exploiter des services spécialisés fournis par d’autres sociétés au lieu de tout développer en interne.
 
@@ -175,6 +179,8 @@ Les API ouvertes offrent ainsi un terrain d’expérimentation accessible, sans 
 
 ### API SOAP
 
+![API SOAP](img/API-SOAP.png){ style="display: block; margin: 0 auto" }
+
 SOAP (Simple Object Access Protocol) est un **protocole de communication** utilisé pour l’échange d’informations structurées entre applications, notamment dans le cadre des services web. Il est conçu pour faciliter la communication entre systèmes sur un réseau, le plus souvent via des protocoles comme **HTTP** ou **SMTP**.
 
 Les API SOAP permettent à des systèmes hétérogènes de **communiquer de manière standardisée**, en s’appuyant sur un format de données strict, généralement **XML**. Une caractéristique clé de SOAP est l’utilisation de **règles et de conventions précises**, garantissant que les messages échangés sont correctement formatés et interprétés par l’expéditeur comme par le destinataire.
@@ -218,6 +224,8 @@ Les API SOAP sont largement utilisées dans des secteurs où **la sécurité**, 
 - **API publiques** : De nombreuses interfaces de données publiques ou gouvernementales utilisent SOAP pour fournir des services accessibles sur **diverses plateformes et systèmes d’exploitation**, assurant une compatibilité large et standardisée.
 
 ### API GraphQL
+
+![API GraphQL](img/API-GraphQL.png){ style="display: block; margin: 0 auto" }
 
 GraphQL (Graph Query Language) est un **langage de requête** et un **environnement d’exécution côté serveur** destiné aux API. Son objectif principal est de permettre aux clients de **récupérer uniquement les données dont ils ont besoin**, ni plus ni moins.
 
@@ -273,6 +281,8 @@ Les API GraphQL sont particulièrement adaptées aux contextes où la **flexibil
 - **Écosystèmes et API publiques orientées développeurs** : GraphQL offre une excellente expérience développeur grâce à l’introspection du schéma et à la documentation auto-générée, favorisant l’adoption et l’innovation autour des plateformes exposées.
 
 ### API REST
+
+![API REST](img/API-REST.jpg){ style="display: block; margin: 0 auto" }
 
 Une **API REST** est une interface de programmation qui respecte les principes de l’architecture **REST** (**Representational State Transfer**). On parle également d’**API RESTful** ou d’**API Web RESTful**.
 De manière générale, une API permet à **deux applications distinctes de communiquer entre elles**, en échangeant des données de façon structurée et standardisée. Les API sont aujourd’hui indispensables pour assurer l’interopérabilité entre les systèmes informatiques.

@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>Pokedex v2</h1>
+  <h1>Pokédex V2</h1>
 
   <div class="controls">
     <input type="text" id="pokemonInput" placeholder="Nom ou ID">
@@ -25,12 +24,12 @@
       <option value="poison">Poison</option>
       <option value="normal">Normal</option>
     </select>
+    <button id="sortAttackBtn">Trier par Attaque</button>
+    <button id="guessBtn">Devine le Pokémon !</button>
   </div>
 
   <div id="loader" class="loader">Chargement...</div>
-
-  <div id="pokemonGrid" class="pokemon-grid">
-  </div>
+  <div id="pokemonGrid" class="pokemon-grid"></div>
 
   <script src="script.js"></script>
 </body>
