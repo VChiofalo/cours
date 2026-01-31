@@ -129,11 +129,11 @@ Par exemple : si vous récupérez trois Pokémon à la fois, ```Promise.all``` s
 ## Pratique
 
 Il est temps de passer à la pratique.
-Dans le dossier [pokedex_v1](./pratique/pokedex_v1/) ouvrez les fichiers et suivez les instructions dans le fichier [script.js](./pratique/pokedex_v1/script.js) afin de commencer votre premier pokedex.
+Dans le dossier **pratique/pokedex_v1** ouvrez les fichiers et suivez les instructions dans le fichier [script.js](./pratique/pokedex_v1/script.js) afin de commencer votre premier pokedex.
 
 ![Pokedex V1](img/pokedex_v1.png){ style="display: block; margin: 0 auto" }
 
-Ensuite dans le dossier [pokedex_v2](./pratique/pokedex_v2/) ouvrez les fichiers et complétez les fonctions dans le fichier [script,js](./pratique/pokedex_v2/script.js) afin d'avoir votre pokedex amélioré. Vous pouvez modifier tout l'affichage à votre convenance.
+Ensuite dans le dossier **pratique/pokedex_v2** ouvrez les fichiers et complétez les fonctions dans le fichier [scriptj.s](./pratique/pokedex_v2/script.js) afin d'avoir votre pokedex amélioré. Vous pouvez modifier tout l'affichage à votre convenance.
 
 ![Pokedex V2](img/pokedex_v2.png){ style="display: block; margin: 0 auto" }
 
