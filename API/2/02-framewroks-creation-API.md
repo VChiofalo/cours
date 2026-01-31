@@ -194,3 +194,7 @@ Il est temps de commencer le TP. Celui-ci ce passera en équipe.+
 - Mettre en place des routes simples
 
 Pour ce faire, allez dans le dossier ```rogue-btc2``` et ouvrez le fichier [API-REST-Rogue.md](../rogue-btc2/API-REST-Rogue.md) et faites la **Partie 0**.
+
+---
+
+© Vincent Chiofalo

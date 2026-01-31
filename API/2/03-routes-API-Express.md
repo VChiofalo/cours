@@ -179,3 +179,7 @@ Chaque **bloc intermédiaire** est un middleware : il peut analyser, transformer
 - Mettre en place des routes simples
 
 Pour ce faire, allez dans le dossier ```rogue-btc2``` et ouvrez le fichier [API-REST-Rogue.md](../rogue-btc2/API-REST-Rogue.md) et faites la **Partie 1**.
+
+---
+
+© Vincent Chiofalo
