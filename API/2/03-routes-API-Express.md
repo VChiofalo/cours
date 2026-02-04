@@ -176,9 +176,10 @@ Chaque **bloc intermédiaire** est un middleware : il peut analyser, transformer
 ## Pratique
 
 **Objecif** : 
-- Mettre en place des routes simples
+- Comprendre le rôle d’un administrateur.
+- Ajouter du contenu au jeu.
 
-Pour ce faire, allez dans le dossier ```rogue-btc2``` et ouvrez le fichier [API-REST-Rogue.md](../rogue-btc2/API-REST-Rogue.md) et faites la **Partie 1**.
+Pour ce faire, allez dans le dossier ```rogue-btc2``` et ouvrez le fichier [API-REST-Rogue.md](../rogue-btc2/API-REST-Rogue.md) et faites les **Partie 1** à **3**.
 
 ---
 

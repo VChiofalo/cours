@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogue API</title>
+</head>
+<body>
+    <h1>Rogue API - Front de test</h1>
+
+    <h2>Admin</h2>
+    <input type="text" id="adminUsername" placeholder="Username">
+    <input type="password" id="adminPassword" placeholder="Password">
+    <button onclick="registerAdmin()">Register Admin</button>
+    <button onclick="loginAdmin()">Login Admin</button>
+    <br><br>
+
+    <h2>Players</h2>
+    <input type="text" id="playerName" placeholder="Player Name">
+    <button onclick="createPlayer()">Create Player</button>
+    <br><br>
+
+    <select id="playerSelect"></select>
+    <button onclick="createGame()">Start Game</button>
+    <br><br>
+
+    <div id="gameStatus"></div>
+    <button onclick="move()" id="moveBtn">Move</button>
+    <button onclick="attack()" id="attackBtn">Attack</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

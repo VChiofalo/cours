@@ -128,33 +128,74 @@ L’arborescence du projet permet de séparer clairement les responsabilités : 
 
 ```bash
 roguelite-api/
-├── index.js
-├── app.js
-├── data/
-│   └── store.js
+project-root/
+├── server.js
 ├── routes/
+│   ├── auth.routes.js
 │   ├── players.routes.js
 │   └── games.routes.js
+├── controllers/
+│   ├── auth.controller.js
+│   ├── players.controller.js
+│   └──games.controller.js
+├── services/
+│   ├── auth.service.js
+│   ├── players.service.js
+│   └── games.service.js
+├── repositories/
+│   ├── player.repo.js
+│   ├── game.repo.js
+│   └── monster.repo.js
 ├── utils/
-│   ├── id.js
-│   └── dungeon.js
-├── public/
-│   ├── index.html
-│   └── script.js
+│   ├── generateId.js
+│   ├── dungeon.js
+│   └── jwt.js
+├── data/
+│   └── store.js
+└── public/
+    ├── index.html
+    └── script.js
+
 └── README.md
 ```
 
 ### Le point d’entrée de l’application
 
-Ici, le fichier ```index.js``` est le **point d’entrée** du projet. C’est lui qui lance réellement le serveur. Il importe l’application Express configurée dans un autre fichier, puis démarre l’écoute sur un port donné. Cette séparation permet de distinguer la **configuration de l’application** du **lancement du serveur**, ce qui est une bonne pratique.
-
-Le fichier ```app.js```, quant à lui, contient la configuration principale d’Express. C’est ici que l’on initialise l’application, que l’on active les middlewares (par exemple pour gérer le JSON ou les fichiers statiques) et que l’on branche les différentes routes de l’API. Ce fichier centralise la logique de configuration sans contenir directement la logique métier.
+Ici, le fichier ```server.js``` est le **point d’entrée** du projet. C’est lui qui lance réellement le serveur. Il importe l’application Express configurée dans un autre fichier, puis démarre l’écoute sur un port donné. Cette séparation permet de distinguer la **configuration de l’application** du **lancement du serveur**, ce qui est une bonne pratique.
 
 ### Les routes : définir les endpoints de l’API
 
 Le dossier ```routes/``` regroupe l’ensemble des **endpoints REST** de l’application. Chaque fichier correspond à une ressource métier précise. Par exemple, ```players.routes.js``` définit les routes liées aux joueurs, tandis que ```games.routes.js``` gère les routes associées aux parties ou aux sessions de jeu.
 
 Cette organisation permet de respecter les principes REST en regroupant les endpoints par ressource. Elle rend également l’API plus facile à maintenir : lorsqu’une fonctionnalité évolue, il suffit de modifier le fichier concerné sans impacter le reste de l’application.
+
+## Les controllers : gérer les requêtes et les réponses
+
+Le dossier **controllers/** contient la logique qui se situe **entre les routes et la logique métier**. Chaque controller correspond à une ressource ou à un ensemble de fonctionnalités et reçoit les requêtes envoyées par les routes.
+
+Par exemple, ```players.controller.js``` va récupérer les données envoyées par une requête ```GET /players``` ou ```POST /players```, puis appeler les fonctions appropriées des services pour traiter ces données. Une fois le traitement terminé, le controller renvoie la réponse au client sous forme de JSON.
+
+Cette séparation permet de **distinguer la logique de traitement des données (controller)** de la **logique métier (service)** et de l’**accès aux données (repository)**, rendant le code plus clair et plus facile à maintenir.
+
+## Les services : la logique métier de l’application
+
+Le dossier **services/** regroupe la **logique métier**, c’est-à-dire les règles et traitements spécifiques à votre application.
+
+Par exemple, ```players.service.js``` peut vérifier qu’un joueur n’existe pas déjà avant de le créer, calculer les scores, ou gérer la progression dans le jeu. Les services ne s’occupent pas directement des requêtes HTTP ni de la base de données, mais **exécutent les actions qui font sens pour l’application**.
+
+Cette couche intermédiaire permet de rendre la logique **réutilisable**, testable et indépendante des détails techniques liés aux routes ou aux données.
+
+## Les repositories : accéder aux données
+
+Le dossier **repositories/** contient le code qui interagit avec les données stockées, qu’elles soient en mémoire, dans des fichiers JSON, ou dans une base de données réelle.
+
+Par exemple, ```player.repo.js``` fournit des fonctions comme ```getAllPlayers()```, ```createPlayer()``` ou ```deletePlayer()```. Les services appellent ces fonctions pour récupérer ou modifier les données, sans avoir à connaître les détails techniques du stockage.
+
+Cette séparation respecte le principe de **séparation des responsabilités** :
+- les routes gèrent les requêtes HTTP,
+- les controllers orchestrent les appels et préparent la réponse,
+- les services appliquent les règles métier,
+- les repositories manipulent les données.
 
 ### Les données de l’application
 

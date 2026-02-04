@@ -45,12 +45,11 @@ Le jeu est un **rogue-lite simplifié** :
 ## Ressources principales
 
 Votre API devra au minimum gérer les ressources suivantes :
-- **User** (pour authentification, avec rôle ```player``` ou ```admin```).
+- **User** (pour authentification, avec rôle ```admin```).
 - **Player** (joueur).
 - **Game** (partie).
 - **Room** (salle).
 - **Monster** (monstre).
-- **Item** (objet).
 
 Vous êtes libres d’**adapter** ou **simplifier** ces ressources tant que la logique REST est respectée.
 
