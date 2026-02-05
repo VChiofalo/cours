@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: api
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+    container_name: front
+    ports:
+      - "8080:80"
+    depends_on:
+      - api

@@ -230,10 +230,6 @@ POST /auth/login
 - Classes de personnages.
 - Objets avec effets.
 - Difficulté variable.
-- Sauvegarde en fichier JSON.
-- Swagger / OpenAPI.
-- Tests automatisés.
-- Middleware de validation.
 
 ---
 
@@ -249,7 +245,7 @@ La priorité est donnée à :
 - la compréhension de REST.
 - la sécurisation via JWT et rôles.
 
-## Exercice bonus – Déploiement Docker avec Nginx
+## Bonus 1 – Déploiement Docker avec Nginx
 
 ```txt
 project-root/
@@ -404,3 +400,15 @@ L’API sera accessible à l’intérieur de Docker par le nom ```api``` sur le 
 docker-compose up --build
 ```
 Accédez au front : ```http://localhost:8080```. L’API doit être accessible via **/api**
+
+## Bonus 2 – Documenter une API
+
+Utilisez Swagger ou OpenAPI afin de documenter votre API.
+
+## Bonus 3 - Mettre en place des test automatisé 
+
+Mettez en place des test automatisé sur votre Rogue API avec Mocha et Supertest.
+
+## Bonus 4 - Déployer une API
+
+Déployez votre Rogue API sur un cloud (gratuit) de votre choix

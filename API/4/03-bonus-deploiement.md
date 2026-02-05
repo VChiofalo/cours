@@ -160,3 +160,8 @@ En maîtrisant Docker dès maintenant, vous posez des bases solides qui vous per
 
 ## Pratique Bonus
 
+Faites la partie bonus de Rogue API.
+
+---
+
+© Vincent Chiofalo
