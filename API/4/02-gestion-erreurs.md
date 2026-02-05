@@ -111,4 +111,8 @@ Les **erreurs de validation** sont renvoyées directement au client avec un code
 
 ## Pratique
 
-Un peu de pratique, ça fera du bien ! Direction le fichier 
+Un peu de pratique, ça fera du bien ! Direction le dossier pratique ! Ouvrez le fichier [pratique-erreurs.md](./pratique/pratique-erreurs.md) et suivez les instructions.
+
+---
+
+© Vincent Chiofalo
