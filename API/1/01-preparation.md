@@ -63,25 +63,7 @@ Suivez le processus d'installation, il n'y a pas besoin de cocher quoique ce soi
 
 Une fois node installé, **fermez (totalement) VSCode** et relancez-le.
 
-Dans le terminal, exécutez la commande suivante : `node ./test-node.js`. Si node est bien installé, le terminal devrait vous afficher un message de confirmation.
-
-### Installation de prompt-sync
-
-**Node.js** vient avec **npm**, un outil qui vous permet d'installer des packages (des morceaux de code) qui proposent des fonctionnalités supplémentaires en JavaScript.
-
-Il y a déjà des millions de développeurs dans le monde entier et certains ont sûrement déjà développé quelque chose dont vous avez besoin, alors pouquoi s'embêter à refaire ce qui a déjà été fait.
-
-Dit encore autrement, face à un besoin spécifique, votre premier réflexe de développeuse ou développeur devra toujours être de vérifier sur internet si quelqu'un ne l'a pas déjà fait et si il est possible de récupérer son code.
-
-C'est ce que nous allons faire tout de suite.
-
-Lancez la commande `npm install 'prompt-sync'` votre terminal va faire des choses de terminal pendant quelques fractions de secondes, et des fichiers *".json"* ainsi qu'un dossier *"node_modules"* vont apparaître dans votre dossier actuel. C'est signe que le module est bien installé.
-
-Ce petit module vous permettra dans vos développements à venir de poser des questions à l'utilisateur directement dans le terminal. Nous aurions très bien pu développer cela nous-mêmes, mais cela aurait nécessité plusieurs dizaines de lignes de code, et comme dit plutôt, pourquoi refaire ce qui a déjà été fait par quelqu'un d'autre ?
-
-Pour tester le module, exécutez la commande suivante : `node .\test-prompt.js`.
-
-Si le terminal vous demande votre prénom et vous souhaite la bienvenue, c'est que tout fonctionne très bien.
+Dans le terminal, exécutez la commande suivante : `node .-v`. Si node est bien installé, le terminal devrait vous afficher votre version de Node.JS installé.
 
 Vous êtes prêt pour attaquer votre introduction aux API.
 

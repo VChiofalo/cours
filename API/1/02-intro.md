@@ -96,10 +96,15 @@ Pour le développeur, l’**API présente plusieurs avantages** : elle **fournit
 Pour chaque situation, indiquez si elle implique l’utilisation d’une API ou non (répondez en dessous de chaque lignes).
 
 1. Votre application mobile envoie une requête à OpenWeatherMap pour récupérer la météo.
+
 2. Vous ouvrez un fichier Excel sur ton ordinateur et tapes des formules pour calculer la moyenne d’une colonne.
+
 3. Votre site web récupère des images depuis Unsplash via leur API.
+
 4. Vous appellez un ami pour lui demander son score à un jeu.
+
 5. Votre programme lit directement les données dans une base de données externe via une connexion définie par le fournisseur.
+
 
 Les API sont donc **essentielles** car elles permettent d’**automatiser des tâches**, d’**intégrer facilement différents systèmes**, d’**accéder à des données et services distants**, d’**améliorer la scalabilité et la sécurité**, et de **favoriser l’innovation**. Elles **réduisent** également **le temps** et **le coût de développement** en permettant aux développeurs de **réutiliser des fonctionnalités existantes** plutôt que de tout créer depuis zéro.
 
