@@ -1,6 +1,7 @@
 const input = document.getElementById('pokemonInput');
 const btn = document.getElementById('searchBtn');
 const info = document.getElementById('pokemonInfo');
+const api = "https://pokeapi.co/api/v2";
 
 btn.addEventListener('click', () => {
   const pokemon = input.value.toLowerCase().trim();
@@ -10,7 +11,7 @@ btn.addEventListener('click', () => {
 });
 
 function fetchPokemon(nameOrId) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId}`)
+  fetch(`${api}/pokemon/${nameOrId}`)
     .then(response => {
       if (!response.ok) throw new Error('Pokémon non trouvé');
       return response.json();
