@@ -3,7 +3,13 @@ const generateId = require('../utils/generateId');
 
 module.exports = {
     create: (name) => {
-        const player = { id: generateId(), name, hp: 300, atk: 15 };
+        const player = 
+        {
+            id: generateId(),
+            name,
+            hp: 300,
+            atk: 15
+        };
         store.players.push(player);
         return player;
     },

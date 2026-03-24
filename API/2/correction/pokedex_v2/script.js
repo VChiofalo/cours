@@ -152,6 +152,13 @@ searchBtn.addEventListener('click', () => {
   if (value) fetchPokemon(value);
 });
 
+window.addEventListener('keydown', (e) => {
+  const value = input.value.toLowerCase().trim();
+  if (e.key === 'Enter') {
+    if (value) fetchPokemon(value);
+  }
+});
+
 prevBtn.addEventListener('click', () => {
   const start = currentId - pageSize > 0 ? currentId - pageSize : 1;
   fetchMultiple(start, pageSize);

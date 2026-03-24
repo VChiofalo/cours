@@ -339,11 +339,11 @@ L'usage de *null* deviendra encore plus important lorsque vous passerez au *PHP*
 
 ## Pratique
 
-Lancer le programme `les-variables.js` avec la commande `node les-variables.js`.
+Lancer le programme `test-variables.js` avec la commande `node test-variables.js`.
 
 Ce programme affiche juste des messages dans le terminal les unss après les autres en utilisant des variables et constantes :
 
- ![Premier essai de programmation avec des variables](img/exemple-terminal-01.png)
+![Premier essai de programmation avec des variables](img/exemple-terminal-01.png)
 
 Oui ! C'est moche. Mais, avant de faire du beau, va falloir mettre les mains dans le camboui.
 
