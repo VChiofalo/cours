@@ -13,8 +13,6 @@ bouton.addEventListener('click', () => {
 
   // 5 - Ajoute un nouvel élément à la liste existante avec comme texte "Élément ajouté dynamiquement"
 
-  // 6 - Change la source et l'attribut alt de l'image pour afficher la seconde image du dossier img
-
   // Bonus 1 - Fais changer la couleur du titre à chaque clic avec une couleur aléatoire
 
   // bonus 2 - Alterne entre deux images à chaque clic (pense à commenter ton code pour l'exo 6)
