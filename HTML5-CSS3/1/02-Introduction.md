@@ -4,11 +4,9 @@
 
 ![Developpement web](img/dev-web.png){ style="display: block; margin: 0 auto" }
 
-Le **développement web** désigne le processus de création, de programmation et de maintenance de sites web et d'applications accessibles via Internet. Il constitue une composante essentielle de notre environnement numérique et permet aux utilisateurs d'accéder à des informations, d'acheter des produits, de communiquer, de se former et de travailler en ligne.
+Le **développement web** désigne le processus de création, de programmation et de maintenance de sites web et d'applications accessibles via Internet. Il permet aux utilisateurs d'accéder à des informations, d'acheter des produits, de communiquer, de se former et de travailler en ligne.
 
-Aujourd'hui, le développement web ne se limite plus à la simple création de pages statiques. Les sites et applications web sont devenus de véritables outils interactifs capables de traiter des données, de communiquer avec des serveurs et de proposer des services complexes.
-
-Le Web occupe ainsi une place centrale dans notre quotidien et dans le fonctionnement de nombreuses organisations.
+Aujourd'hui, le développement web ne se limite plus à la création de pages statiques : les sites et applications web sont devenus de véritables outils interactifs, capables de traiter des données, de communiquer avec des serveurs et de proposer des services complexes.
 
 ### Qu'est-ce que le développement web ?
 
@@ -20,11 +18,11 @@ Le développement web se divise généralement en deux grandes catégories compl
 
 ![Frontend](img/frontend.jpg){ style="display: block; margin: 0 auto" }
 
-Le Front-End correspond à tout ce que l'utilisateur voit et avec quoi il interagit directement dans son navigateur.
+Le **Front-End** correspond à tout ce que l'utilisateur voit et avec quoi il interagit directement dans son navigateur.
 
 Il repose principalement sur trois technologies fondamentales :
-- **HTML** (**HyperText Markup Language**) : permet de structurer le contenu d'une page web, comme les textes, les titres, les images, les liens, les formulaires ou encore les tableaux.
-- **CSS** (**Cascading Style Sheets**) : permet de gérer la présentation et l'apparence de la page : couleurs, typographies, espacements, dimensions, positionnement, animations et adaptation aux différentes tailles d'écran.
+- **HTML (HyperText Markup Language)** : permet de structurer le contenu d'une page web, comme les textes, les titres, les images, les liens, les formulaires ou encore les tableaux.
+- **CSS (Cascading Style Sheets)** : permet de gérer la présentation et l'apparence de la page : couleurs, typographies, espacements, dimensions, positionnement, animations et adaptation aux différentes tailles d'écran.
 - **JavaScript** : permet d'ajouter du comportement et de l'interactivité à une page web, par exemple des menus dynamiques, des formulaires interactifs, des animations ou la mise à jour de contenu sans recharger toute la page.
 
 Dans ce cours, nous nous concentrerons principalement sur **HTML5** et **CSS3**, qui constituent les fondations du développement Front-End.
