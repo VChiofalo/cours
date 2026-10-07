@@ -516,7 +516,7 @@ Les règles essentielles à retenir :
 - `class` permet de regrouper des éléments ;
 - les commentaires utilisent `<!-- ... -->`.
 
-## Lien utiles
+## Liens utiles
 
 **Documentations** :
 - https://developer.mozilla.org/fr/docs/Web/HTML
@@ -526,8 +526,7 @@ Les règles essentielles à retenir :
 
 ## À vous
 
-Il est temps pour un peu de pratique. Allez dans le dossier [exercices](exercices/01-lire.md) et faites les exercices 01 à 04 dans l'ordre (le lien vous amène sur le premier exercice)
-
+Il est temps pour un peu de pratique. Allez dans le dossier [exercices](exercices/01-lire.md) et faites les exercices 01 à 04 dans l'ordre (le lien vous amène sur le premier exercice).
 
 ---
 
