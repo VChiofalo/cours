@@ -487,3 +487,11 @@ Les règles essentielles :
 
 **Documentations** :
 - https://developer.mozilla.org/fr/docs/Learn_web_development/Core/Styling_basics/Box_model
+
+## À vous
+
+Il est temps de passer à la pratique. Allez dans le dossier [exercices](exercices/03-mettre-en-forme-box-model.md) et faites l'exercice 03 (le lien vous amène sur l'exercice).
+
+---
+
+© Vincent Chiofalo
