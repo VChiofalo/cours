@@ -68,7 +68,7 @@ Exemples de SGBDR courants :
 
 La distinction est importante : **la base de données**, ce sont les données ; **le SGBD**, c'est le logiciel qui s'en occupe. On ne parle jamais directement aux fichiers de la base : on passe toujours par le SGBD.
 
-![Les applications et les utilisateurs passent toujours par le SGBD](img/sgbd.png "Rôle du SGBD"){ style="display: block; margin: 0 auto" }
+![Les applications et les utilisateurs passent toujours par le SGBD](images/sgbd.png "Rôle du SGBD"){ style="display: block; margin: 0 auto" }
 
 #### 2.2 SQL
 
@@ -210,7 +210,7 @@ Le **schéma** d'une base décrit sa **structure** : la liste des tables, leurs 
 
 Voici le schéma de la base `scholar` :
 
-![Schéma de la base scholar](img/schema-scholar.png "Schéma de la base scholar"){ style="display: block; margin: 0 auto" }
+![Schéma de la base scholar](images/schema-scholar.png "Schéma de la base scholar"){ style="display: block; margin: 0 auto" }
 
 ```
 student (student_id, first_name, last_name, age, average_grade, email, phone_number, city)
@@ -241,3 +241,7 @@ On remarque la table `student_department` : elle ne contient que deux clés étr
 *- Julien POIRIER*
 *- Wikipédia*
 *- sql.sh*
+
+---
+
+© Vincent Chiofalo
