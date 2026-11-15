@@ -1,90 +1,430 @@
-body{
-    width: 70%;
-    margin: 0 auto;
-    background: black;
+/* ==========================================================
+   VERSION 1 — GRIMOIRE
+   Parchemin, encre, dorures : l'ambiance d'un livre ancien.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ---------- Variables ---------- */
+:root {
+    --bois-fonce: #1a120b;
+    --bois: #2e1f13;
+    --parchemin: #f1e3c4;
+    --parchemin-fonce: #e0c89a;
+    --encre: #3b2a1a;
+    --rouge: #8b1e1e;
+    --or: #b8893b;
+    --or-clair: #e2c27a;
+    --rayon: 6px;
 }
 
-header, footer, main{
-    background-color: #c3bebd;
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-footer p{
+body {
     margin: 0;
-    padding: 20px 0;
-}
-
-.flex{
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    font-family: 'EB Garamond', Georgia, serif;
+    color: var(--parchemin);
+    background:
+        radial-gradient(ellipse at top, #3d2a1a 0%, transparent 60%),
+        radial-gradient(ellipse at bottom, #24170d 0%, transparent 70%),
+        var(--bois-fonce);
 }
 
-.justify-center{
-    justify-content: center;
+/* Classes utilitaires d'origine (conservées) */
+.flex { display: flex; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+.hidden { display: none; }
+
+/* ---------- En-tête ---------- */
+.site-header {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid rgba(184, 137, 59, 0.3);
 }
 
-.align-center{
+.header-inner {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 72px;
+    width: auto;
+    border-radius: var(--rayon);
+    border: 2px solid var(--or);
+    background: #fff;
+}
+
+.site-title {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    letter-spacing: 0.08em;
+    color: var(--or-clair);
+    text-align: center;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Mise en page du jeu ---------- */
+.game {
+    flex: 1;
+    width: min(1200px, 100% - 2rem);
+    margin: 2rem auto;
+    display: grid;
+    align-content: start; /* évite que les lignes s'étirent sur les écrans hauts */
+    gap: 1.5rem;
+    grid-template-areas:
+        "scene"
+        "inventaire"
+        "histoire";
+}
+
+@media (min-width: 900px) {
+    .game {
+        grid-template-columns: 1.3fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "scene      histoire"
+            "inventaire histoire";
+        align-items: start;
+    }
+}
+
+.scene { grid-area: scene; }
+.inventory-panel { grid-area: inventaire; align-self: start; }
+#story { grid-area: histoire; }
+
+/* ---------- Image de la scène ---------- */
+.scene-frame {
+    padding: 10px;
+    background: linear-gradient(145deg, var(--or-clair), var(--or) 40%, #6e4f1f);
+    border-radius: var(--rayon);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+#scene-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 3px;
+    background: #000;
+}
+
+/* Images à ne pas recadrer (texte dedans) */
+#scene-image[src*="start"],
+#scene-image[src*="died"],
+#scene-image[src*="victoire"] {
+    object-fit: contain;
+}
+
+#scene-image[src*="start"] {
+    background: #fff;
+    cursor: pointer;
+    animation: respiration 2.5s ease-in-out infinite;
+}
+
+@keyframes respiration {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(0.85); }
+}
+
+/* Classe utilisée par le JS : assombrissement de la clairière */
+#scene-image.assombrir {
+    animation: none;
+    filter: brightness(0);
+    transition: filter 10s;
+}
+
+/* ---------- Inventaire ---------- */
+.inventory-panel {
+    padding: 1rem 1.25rem;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(184, 137, 59, 0.4);
+    border-radius: var(--rayon);
+}
+
+.panel-title {
+    margin: 0 0 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--or-clair);
+}
+
+#inventory {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    min-height: 80px;
     align-items: center;
 }
 
-header img{
-    width: 10%;
+#inventory:empty::before {
+    content: "Votre besace est vide…";
+    font-style: italic;
+    color: rgba(241, 227, 196, 0.5);
 }
 
-main img{
-    width: 400px;
-    height: 300px;
-    border: 6px solid rgb(88, 86, 95);
-    margin: 20px 0;
+#inventory img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    padding: 6px;
+    image-rendering: pixelated;
+    background: var(--parchemin);
+    border: 2px solid var(--or);
+    border-radius: var(--rayon);
+    box-shadow: inset 0 0 12px rgba(59, 42, 26, 0.35);
+    animation: apparition 0.5s ease-out;
 }
 
-p{
-    font-size: 20px;
-    text-align: center;
-    color: #7577aa;
+@keyframes apparition {
+    from { transform: scale(0.4); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-#inventory{
-    border: 6px solid rgb(30, 30, 32);
-    width: 300px;
-    height: 100px;
-    margin: 10px auto;
+/* ---------- Histoire (le parchemin) ---------- */
+#story {
+    padding: 2rem 2rem 1.5rem;
+    color: var(--encre);
+    background:
+        radial-gradient(ellipse at center, transparent 55%, rgba(120, 80, 30, 0.25) 100%),
+        linear-gradient(180deg, var(--parchemin), var(--parchemin-fonce));
+    border-radius: var(--rayon);
+    box-shadow:
+        0 0 0 1px #c9a96a,
+        0 0 0 6px var(--bois),
+        0 0 0 7px var(--or),
+        0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-#inventory img{
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    border: none;
+#story-text {
+    margin: 0 0 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: justify;
+    hyphens: auto;
 }
 
-#story{
-    width: 80%;
-    min-height: 280px;
-    margin: 0 auto;
+/* Lettrine sur la première lettre */
+#story-text::first-letter {
+    float: left;
+    font-family: 'Cinzel', serif;
+    font-size: 3.4rem;
+    line-height: 0.9;
+    padding: 0.2rem 0.5rem 0 0;
+    color: var(--rouge);
 }
 
-#story{
-    border: 6px solid rgb(30, 30, 32);
-}
-
-.hidden{
-    display: none;
+/* ---------- Choix (créés en <p> par le JS) ---------- */
+#choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    counter-reset: choix;
 }
 
 #choices p {
-  cursor: pointer;
-  color: #70003a;
-  padding: 8px;
-  border-radius: 8px;
-  margin: 5px;
-  text-align: center;
-  transition: background 0.3s;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--rouge);
+    background: rgba(255, 255, 255, 0.35);
+    border-left: 4px solid var(--or);
+    border-radius: 0 var(--rayon) var(--rayon) 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.25s, transform 0.25s, color 0.25s;
 }
 
-#choices p:hover {
-  background: #847e82;
+#choices p::before {
+    counter-increment: choix;
+    content: counter(choix, upper-roman) ". ";
+    font-family: 'Cinzel', serif;
+    color: var(--or);
 }
 
-.assombrir{
-    transition-duration: 10s;
-    filter: brightness(0);
+/* Survol uniquement sur les appareils qui ont une souris */
+@media (hover: hover) {
+    #choices p:hover {
+        color: var(--parchemin);
+        background: var(--rouge);
+        transform: translateX(6px);
+    }
+}
+
+/* Retour visuel au toucher (mobile, tablette) */
+#choices p:active {
+    color: var(--parchemin);
+    background: var(--rouge);
+}
+
+/* ---------- Pied de page ---------- */
+.site-footer {
+    padding: 1.25rem;
+    text-align: center;
+    border-top: 1px solid rgba(184, 137, 59, 0.3);
+}
+
+.site-footer p {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: rgba(226, 194, 122, 0.7);
+}
+
+/* ==========================================================
+   TABLETTE (600px → 899px)
+   Une seule colonne, mais centrée et moins large pour garder
+   des lignes de texte agréables à lire.
+   ========================================================== */
+@media (min-width: 600px) and (max-width: 899px) {
+    .game {
+        width: min(760px, 100% - 3rem);
+        gap: 1.25rem;
+    }
+
+    /* Inventaire en bandeau : titre à gauche, objets à droite */
+    .inventory-panel {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .panel-title {
+        margin: 0;
+    }
+
+    #inventory {
+        min-height: 72px;
+    }
+
+    #story {
+        padding: 1.75rem;
+    }
+}
+
+/* ==========================================================
+   MOBILE (moins de 600px)
+   ========================================================== */
+@media (max-width: 599px) {
+    /* En-tête plus compact */
+    .site-header {
+        padding: 0.9rem 0.75rem;
+    }
+
+    .header-inner {
+        gap: 0.6rem;
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        height: 44px;
+    }
+
+    .site-title {
+        font-size: 1.05rem;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+
+    /* Moins de marges sur les côtés pour laisser la place au contenu */
+    .game {
+        width: calc(100% - 1.25rem);
+        margin: 1rem auto 1.5rem;
+        gap: 1rem;
+    }
+
+    .scene-frame {
+        padding: 6px;
+    }
+
+    /* Inventaire en bandeau compact */
+    .inventory-panel {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.6rem 0.9rem;
+    }
+
+    .panel-title {
+        margin: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+    }
+
+    #inventory {
+        min-height: 56px;
+        gap: 0.5rem;
+    }
+
+    #inventory:empty::before {
+        font-size: 0.95rem;
+    }
+
+    #inventory img {
+        width: 56px;
+        height: 56px;
+        padding: 4px;
+    }
+
+    /* Le parchemin : moins de marge intérieure, texte aligné à gauche
+       (le justifié crée de grands trous sur un écran étroit) */
+    #story {
+        padding: 1.25rem 1.1rem;
+        box-shadow:
+            0 0 0 1px #c9a96a,
+            0 0 0 4px var(--bois),
+            0 0 0 5px var(--or),
+            0 12px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    #story-text {
+        font-size: 1.08rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    #story-text::first-letter {
+        font-size: 2.7rem;
+    }
+
+    /* Choix : zones de toucher plus grandes (≥ 48px de haut) */
+    #choices p {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        min-height: 48px;
+        padding: 0.7rem 0.9rem;
+        font-size: 1.05rem;
+        line-height: 1.3;
+    }
+
+    .site-footer {
+        padding: 1rem;
+    }
+
+    .site-footer p {
+        font-size: 0.75rem;
+    }
+}
+
+/* ---------- Accessibilité ---------- */
+@media (prefers-reduced-motion: reduce) {
+    #scene-image[src*="start"],
+    #inventory img {
+        animation: none;
+    }
 }

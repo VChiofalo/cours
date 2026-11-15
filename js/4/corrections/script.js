@@ -10,13 +10,13 @@ let message = document.querySelector('#message');
 let bouton = document.querySelector('#relancer');
 
 function afficherMessage() {
-message.textContent = "Bienvenue sur la page !";
+    message.textContent = "Bienvenue sur la page !";
 }
 
 function lancerDelai() {
-message.textContent = "";
-// `setTimeout()` prend deux arguments : Une fonction à exécuter et un temps d’attente en millisecondes avant l’exécution.
-setTimeout(afficherMessage, 3000); // Lance après 3 secondes
+    message.textContent = "";
+    // `setTimeout()` prend deux arguments : Une fonction à exécuter et un temps d’attente en millisecondes avant l’exécution.
+    setTimeout(afficherMessage, 3000); // Lance après 3 secondes
 }
 
 bouton.addEventListener('click', lancerDelai);
@@ -51,14 +51,14 @@ intervalId = setInterval(function() {
 
     if (temps === 0) {
     // clearInterval() arrête cette boucle.
-    clearInterval(intervalId);
-    compteur.textContent = "C’est parti !";
+        clearInterval(intervalId);
+        compteur.textContent = "C’est parti !";
     }
 }, 1000);
 });
 
 stop.addEventListener('click', function() {
-clearInterval(intervalId);
+    clearInterval(intervalId);
 });
 
 
@@ -78,22 +78,22 @@ let taille = 50;
 let intervalId2;
 
 agrandir.addEventListener('click', function() {
-clearInterval(intervalId2);
-intervalId2 = setInterval(function() {
-    taille += 5;
-    carre.style.width = taille + "px";
-    carre.style.height = taille + "px";
-
-    if (taille >= 200) {
     clearInterval(intervalId2);
-    }
-}, 100);
-});
+    intervalId2 = setInterval(function() {
+        taille += 5;
+        carre.style.width = taille + "px";
+        carre.style.height = taille + "px";
 
-reset.addEventListener('click', function() {
-clearInterval(intervalId2);
-taille = 50;
-carre.style.width = carre.style.height = "50px";
+        if (taille >= 200) {
+        clearInterval(intervalId2);
+        }
+    }, 100);
+    });
+
+    reset.addEventListener('click', function() {
+    clearInterval(intervalId2);
+    taille = 50;
+    carre.style.width = carre.style.height = "50px";
 });
 
 
@@ -116,23 +116,23 @@ let position = 0;
 let animationId;
 
 function animer() {
-position += 3;
-carre2.style.left = position + "px";
+    position += 3;
+    carre2.style.left = position + "px";
 
-if (position < 400) {
-    // requestAnimationFrame() demande au navigateur d’exécuter une fonction avant le prochain rafraîchissement d’écran, généralement 60 fois par seconde.
-    animationId = requestAnimationFrame(animer);
-}
+    if (position < 400) {
+        // requestAnimationFrame() demande au navigateur d’exécuter une fonction avant le prochain rafraîchissement d’écran, généralement 60 fois par seconde.
+        animationId = requestAnimationFrame(animer);
+    }
 }
 
 demarrer.addEventListener('click', function() {
-cancelAnimationFrame(animationId);
-position = 0;
-animationId = requestAnimationFrame(animer);
+    cancelAnimationFrame(animationId);
+    position = 0;
+    animationId = requestAnimationFrame(animer);
 });
 
 arreter.addEventListener('click', function() {
-cancelAnimationFrame(animationId);
+    cancelAnimationFrame(animationId);
 });
 
 
@@ -151,16 +151,16 @@ let direction = 1; // 1 = droite, -1 = gauche
 let animationId2;
 
 function animer() {
-position2 += vitesse * direction;
-balle.style.left = position2 + "px";
+    position2 += vitesse * direction;
+    balle.style.left = position2 + "px";
 
-if (position2 >= 400 || position2 <= 0) {
-    direction *= -1;
-    balle.style.backgroundColor =
-    '#' + Math.floor(Math.random() * 16777215).toString(16); // Couleur aléatoire
-}
+    if (position2 >= 400 || position2 <= 0) {
+        direction *= -1;
+        balle.style.backgroundColor =
+        '#' + Math.floor(Math.random() * 16777215).toString(16); // Couleur aléatoire
+    }
 
-animationId2 = requestAnimationFrame(animer);
+    animationId2 = requestAnimationFrame(animer);
 }
 
 animer(); // démarre automatiquement

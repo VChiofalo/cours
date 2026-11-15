@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le jeu dont vous êtes le héro</title>
+    <title>Le jeu dont vous êtes le héros</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="flex justify-center align-center">
-            <img src="img/logo_.jpg" alt="logo">
+    <header class="site-header">
+        <div class="flex justify-center align-center header-inner">
+            <img src="img/logo_.jpg" alt="logo" class="logo">
+            <h1 class="site-title">Le jeu dont vous êtes le héros</h1>
         </div>
     </header>
-    <main>
-        <div class="flex justify-center align-center">
-            <img src="img/start-game.jpg" alt="début du jeu" id="scene-image">
-        </div>
-        <div>
-            <p>Inventaire</p>
-            <div id="inventory">
 
+    <main class="game">
+        <section class="scene">
+            <div class="flex justify-center align-center scene-frame">
+                <img src="img/start-game.jpg" alt="début du jeu" id="scene-image">
             </div>
-        </div>
-        <div id="story">
+        </section>
+
+        <aside class="inventory-panel">
+            <p class="panel-title">Inventaire</p>
+            <div id="inventory"></div>
+        </aside>
+
+        <section id="story">
             <p id="story-text">Bienvenue dans le jeu dont vous êtes le héros <br>Pour commencer la partie cliquez sur "Start Game"</p>
             <div id="choices"></div>
-        </div>
+        </section>
     </main>
-    <footer>
+
+    <footer class="site-footer">
         <p>© Le Jeu Dont Vous Êtes le Héros</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

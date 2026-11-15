@@ -1,0 +1,10 @@
+prenom;nom;date_naissance;email;telephone;ville;departement
+  emma ;ROUX;02/01/2005;Emma.Roux@Mail.com;06 12 34 56 01;Lyon;Informatique
+Nathan;blanc;12/07/2004;nathan.blanc@mail.com;06.12.34.56.02;toulouse;Mathématiques
+Inès;Faure;30/10/2003;;0612345603;Rennes;Biologie
+hugo;perrin  ;08/03/2005;hugo.perrin@mail.com;;Paris;Informatique
+Léna;Morel;10/02/2004;lena.morel@mail.com;06 12 34 56 05;Paris;Physique
+Tom;Lambert;15/09/2004;tom.lambert@mail.com;06 12 34 56 06;Lyon;Chimie
+Alice;Dupont;04/11/2004;alice.dupont@mail.com;0601020304;Paris;Informatique
+Sarah;Benali;31/02/2004;sarah.benali@mail.com;06 12 34 56 08;Rennes;Économie
+Tom;Lambert;15/09/2004;tom.lambert@mail.com;06 12 34 56 06;Lyon;Chimie

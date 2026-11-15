@@ -285,9 +285,9 @@ let a = Math.cbrt(1000);  // a = 10
 
 ## Pratique
 
-Lancez le programme `les-operateurs.js` avec la commande `node les-operateurs.js`.
+Lancez le programme `operateurs.js` avec la commande `node operateurs.js`.
 
-Celui-ci effectue divers opération mathématiques et affiche les résultats.
+Celui-ci effectue divers opération mathématiques et affiche les résultats quand vous aurez fini de le remplir.
 
 A noter qu'il est également fait massivement usage de la concaténation des chaînes de caractère avec l'opérateur `+`.
 
@@ -295,7 +295,7 @@ Cela permet de faire de créer des messages beaucoup plus intéressants dans le 
 
 ![bla](img/exemple-terminal-02.png)
 
-N'hésitez pas à ouvrir le fichier, à le modifier !
+N'hésitez pas à ouvrir le fichier, à le modifier [operateurs.js](operateurs.js)!
 Amusez-vous, trifouillez, bidouillez, expérimentez, pratiquez.
 
 ## En Résumé

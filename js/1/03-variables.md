@@ -347,7 +347,7 @@ Ce programme affiche juste des messages dans le terminal les unss après les aut
 
 Oui ! C'est moche. Mais, avant de faire du beau, va falloir mettre les mains dans le camboui.
 
-N'hésitez pas à ouvrir le fichier `les-variables.js` et à le modifier à volonté pour tester par vous même.
+N'hésitez pas à ouvrir le fichier [test-variables.js](test-variables.js) et à le modifier à volonté pour tester par vous même.
 
 ## En Résumé
 

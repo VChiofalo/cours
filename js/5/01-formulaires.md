@@ -444,7 +444,7 @@ Avec ce style, les **changements de couleur** sont **plus doux** et **modernes**
 
 ## Pratique
 
-Dans le dossier ```manip-formulaires```, regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
+Dans le dossier [manip-formulaires](manip-formulaires/script.js), regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
 
 ---
 

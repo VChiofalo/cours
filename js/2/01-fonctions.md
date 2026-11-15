@@ -98,7 +98,7 @@ console.log(additionner(10, 20)); // 30
 
 ## Pratique
 
-Dans le dossier ```manip-fonctions```, regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
+Dans le dossier [manip-fonction](manip-fonction/script.js), regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
 
 ---
 

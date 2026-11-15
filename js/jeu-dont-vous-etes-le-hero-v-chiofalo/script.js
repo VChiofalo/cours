@@ -371,6 +371,7 @@ function sceneMagicien() {
         mort(texteMagicienMort);
     });
 
+
     // Choix 2e
     const choix2 = document.createElement("p");
     choix2.textContent = "La lumière";

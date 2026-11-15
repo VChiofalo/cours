@@ -225,7 +225,7 @@ https://developer.mozilla.org/fr/docs/Web/API/Window/requestAnimationFrame
 
 ## Pratique
 
-Dans le dossier ```manip-animations```, regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
+Dans le dossier [manip-animations](manip-animations/script.js), regardez les différents fichier et dans le fichier ```script.js``` faites les exercices en **suivant les consignes**.
 
 ---
 

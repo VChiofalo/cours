@@ -4,6 +4,7 @@ console.log('Hello world'); // console permet de communiquer avec l'invite de cm
 var annee;
 let prenom;
 let nom;
+ 
 
             /*** Affectation variables ***/
 annee = 1815;
@@ -27,4 +28,3 @@ const entierNormal = 1234567890;
 const grosEntier = 1234567890123456789012345678901234567890n;
 
 console.log(grosEntier);
-    

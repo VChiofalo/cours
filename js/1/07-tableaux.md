@@ -223,7 +223,7 @@ C’est une méthode puissante pour effectuer des calculs ou agréger des donné
 
 ## Pratique
 
-Ouvrez le fichier ```pratique-tableaux.js``` et faites les exercices 1 à 7.
+Ouvrez le fichier [pratique-tableaux.js](pratique-tableaux.js) et faites les exercices 1 à 7.
 
 ## En résumé
 

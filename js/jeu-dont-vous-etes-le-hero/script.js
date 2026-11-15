@@ -104,7 +104,10 @@ function sceneOgre() {
 
 // == Éléments du dom réutilisable ==
 
+let jesqispqs = document.querySelector
+
 // == Code ==
 
 document.addEventListener("DOMContentLoaded", () => {
+    
 });
