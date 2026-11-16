@@ -32,7 +32,7 @@ Quand vous ouvrez phpMyAdmin dans votre navigateur, voici ce qui se passe :
 
 ### 2. Installer WampServer
 
-1. Rendez-vous sur [wampserver.com](https://www.wampserver.com/) et téléchargez la dernière version **64 bits**.
+1. Rendez-vous sur [wampserver.aviatechno.net](https://wampserver.aviatechno.net/) et téléchargez la dernière version **64 bits**.
 2. Lancez l'installateur et laissez les options par défaut (dossier `C:\wamp64`).
 3. Si l'installateur signale qu'il manque des **paquets Visual C++ Redistributable**, installez-les : ce sont des bibliothèques Microsoft dont Apache, PHP et MySQL ont besoin. WampServer indique où les trouver.
 4. En fin d'installation, on vous demande de choisir un navigateur et un éditeur de texte par défaut : laissez ceux proposés ou choisissez les vôtres.
